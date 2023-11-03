@@ -1,0 +1,79 @@
+(4)->
+public class Main{
+    public static void main(String[] args) {
+        int a=100,b=34;
+        System.out.println("value of a ="+a);
+        System.out.println("value of b ="+b);
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println("value of a="+a);
+        System.out.println("value of b="+b);
+    }
+}
+
+class A imp c ext d
+interface B
+class D imp B
+interface C extends B
+main class
+
+
+
+(2)->
+public class Main{
+    public static void main(String[] args)
+    {
+        int n1=0,n2=1,n3,i,count=10;
+        System.out.print(n1+" "+n2);
+
+        for(i=2;i<count;++i)
+        {
+            n3=n1+n2;
+            System.out.print(" "+n3);
+            n1=n2;
+            n2=n3;
+        }
+    }
+}
+
+(3)->
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 153, a, rem, result = 0;
+
+        a = num;
+
+        while (a != 0) {
+            rem = a % 10;
+            a /= 10;
+        }
+
+        if (result == num)
+            System.out.println(num + " is an Armstrong number.");
+        else
+            System.out.println(num + " is not an Armstrong number.");
+    }
+}
+
+(1)->
+public class Main {
+    public static void main(String[] args) {
+        int num = 33, i = 1;
+        boolean flag = false;
+        while (i <= 100) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+            i++;
+        }
+        if (flag == true) {
+            System.out.println("prime number");
+        } else {
+            System.out.println("not a prime number");
+        }
+    }
+}

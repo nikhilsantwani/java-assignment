@@ -1,0 +1,158 @@
+2d array questions :
+        basic questions of 2D array
+        1:
+        Write a Java program to initialize and display a 2D array of integers.
+public class Main {
+    public static void main(String[] args) {
+        int[][] a = {{11,13,15},{12,14,16},{17,18,19}};
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+2:
+Create a Java program prints the sum of all elements in a 2D array.
+public class Main {
+    public static void main(String[] args) {
+        int[][] a = {{11,13,15},{12,14,16},{17,18,19}};
+        int sum=0;
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                sum=sum+a[i][j];
+            }
+        }
+        System.out.println("sum of 2-D array = "+sum);
+    }
+}
+
+
+1)addition  
+a[][]
+b[][] 
+a+b
+
+2)mulitplication 
+a[][]
+b[][]
+c[][]a*b;
+=>>
+public class Main {
+    public static void main(String[] args) {
+        int[][] a = {{1,2,3},{4,5,6}};
+        int[][] b = {{10,11,12},{13,14,15}};
+        System.out.println("addition of 2-D array = ");
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                System.out.print(a[i][j]+b[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("multiplication of 2-D array = ");
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                System.out.print(a[i][j]*b[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+1: Sum of Elements in 2D Array
+ {1, 2, 3},
+ {4, 5, 6},
+ {7, 8, 9}
+sum =>45 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter row = ");
+        int row = sc.nextInt();
+        System.out.println("enter column = ");
+        int column = sc.nextInt();
+        int[][] a = new int[row][column];
+        int sum =0;
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                System.out.println("enter elements = ");
+                a[i][j] = sc.nextInt();
+                sum=sum+a[i][j];
+            }
+        }
+        System.out.println("sum of array = "+sum);
+    }
+}
+
+2) Finding Maximum Element
+ {12, 45, 67},
+            {23, 9, 13},
+            {56, 34, 21}
+
+67 is max 
+
+
+->>public class Main {
+    public static void main(String[] args) {
+        int[][] a = {{12,45,67},{23,9,13},{56,34,21}};
+        int max=0;
+        for (int i=0;i<a.length;i++){
+            for (int j=0;j<3;j++){
+                if (a[i][j]>max){
+                    max=a[i][j];
+                }
+            }
+        }
+        System.out.println("max element in array = "+max);
+    }
+}
+
+4) Calculate the sum of each row in a 2D array.
+
+  {1, 2, 3}=6
+{4, 5, 6}=15
+{7, 8, 9}=24
+==>>
+public class Main {
+    public static void main(String[] args) {
+        int[][] a={{1, 2, 3},{4,5,6},{7,8,9}};
+        int row,column;
+        int sum=0;
+        row=a.length;
+        column=a[0].length;
+
+        for (int i=0;i<row;i++){
+            for (int j=0;j<column;j++) {
+                sum = sum + a[i][j];
+            }
+            System.out.println("sum of "+(i+1)+" row ="+sum);
+        }
+    }
+}
+
+5) Calculate the sum of each column in a 2D array.
+
+{1, 2, 3},=12
+{4, 5, 6},=15
+  {7, 8, 9}=18
+==>>
+public class Main {
+    public static void main(String[] args) {
+        int[][] a={{1, 2, 3},{4,5,6},{7,8,9}};
+        int row,column;
+        int sum=0;
+        row=a.length;
+        column=a[0].length;
+        for (int i=0;i<column;i++){
+            for (int j=0;j<row;j++){
+                sum=sum+a[j][i];
+            }
+            System.out.println("sum of "+(i+1)+" column = "+sum);
+        }
+    }
+}

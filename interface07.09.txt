@@ -1,0 +1,735 @@
+(1)->
+[A]-> constant
+interface A{
+    void add();
+}
+class B implements A {
+    public void add() {
+        int a=34,b=12;
+        System.out.println("add ="+(a+b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B().add();
+
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    void add();
+}
+class B implements A{
+    @Override
+    public void add() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("addition ="+(a+b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B().add();
+    }
+}
+
+(2)->
+[A]->
+interface A{
+    void add(int a,int b);
+    void sub(int a,int b);
+    void mul(int a,int b);
+    void div(int a,int b);
+    void mod(int a,int b);
+}
+class B implements A{
+    public void add(int a,int b) {
+        System.out.println("add ="+(a+b));
+    }
+    public void sub(int a, int b) {
+        System.out.println("sub="+(a-b));
+    }
+    public void mul(int a, int b) {
+        System.out.println("mul ="+(a*b));
+    }
+    public void div(int a, int b) {
+        System.out.println("div ="+(a/b));
+    }
+    public void mod(int a, int b) {
+        System.out.println("mod ="+(a%b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B().add(71,39);
+        new B().sub(71,39);
+        new B().mul(71,39);
+        new B().div(71,9);
+        new B().mod(71,8);
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    void add(int a,int b);
+    void sub(int a,int b);
+    void mul(int a,int b);
+    void div(int a,int b);
+    void mod(int a,int b);
+}
+class B implements A{
+    @Override
+    public void add(int a, int b) {
+        System.out.println("add="+(a+b));
+    }
+
+    @Override
+    public void sub(int a, int b) {
+        System.out.println("sub ="+(a-b));
+    }
+
+    @Override
+    public void mul(int a, int b) {
+        System.out.println("mul ="+(a*b));
+    }
+
+    @Override
+    public void div(int a, int b) {
+        System.out.println("div ="+(a/b));
+    }
+
+    @Override
+    public void mod(int a, int b) {
+        System.out.println("mod ="+(a%b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println(" b =");
+        int b =sc.nextInt();
+        new B().add(a,b);
+        new B().sub(a,b);
+        new B().mul(a,b);
+        new B().div(a,b);
+        new B().mod(a,b);
+    }
+}
+
+(3)->
+[A]->
+interface A{
+    int add();
+    int sub();
+    int mul();
+    float div();
+    float mod();
+}
+class B implements A{
+
+    public int add() {
+        int a=21,b=19;
+        int c=a+b;
+        return c;
+    }
+    public int sub() {
+        int a=21,b=19;
+        int c=a-b;
+        return c;
+    }
+    public int mul() {
+        int a=21,b=19;
+        int c=a*b;
+        return c;
+    }
+    public float div() {
+        float a=21,b=19;
+        float c=a/b;
+        return c;
+    }
+    public float mod() {
+        float a=21,b=19;
+        float c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        System.out.println("add ="+k.add());
+        System.out.println("sub ="+k.sub());
+        System.out.println("mul ="+k.mul());
+        System.out.println("div ="+k.div());
+        System.out.println("mod ="+k.mod());
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    int add();
+    int sub();
+    int mul();
+    float div();
+    float mod();
+}
+class B implements A{
+    public int add() {
+     Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+     int c=a+b;
+        return c;
+    }
+    public int sub() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a-b;
+        return c;
+    }
+    public int mul() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a*b;
+        return c;
+    }
+    public float div() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        float a = sc.nextFloat();
+        System.out.println("b =");
+        float b = sc.nextFloat();
+        float c=a/b;
+        return c;
+    }
+    public float mod() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        float a = sc.nextFloat();
+        System.out.println("b =");
+        float b = sc.nextFloat();
+        float c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        System.out.println("add ="+k.add());
+        System.out.println("sub ="+k.sub());
+        System.out.println("mul ="+k.mul());
+        System.out.println("div ="+k.div());
+        System.out.println("mod ="+k.mod());
+    }
+}
+
+(4)->
+[A]->
+interface A{
+    int add(int a, int b);
+    int sub(int a, int b);
+    int mul(int a, int b);
+    int div(int a, int b);
+    int mod(int a, int b);
+}
+class B implements A{
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public int sub(int a, int b) {
+     int c=a-b;
+        return c;
+    }
+    public int mul(int a, int b) {
+        int c=a*b;
+        return c;
+    }
+    public int div(int a, int b) {
+        int c=a/b;
+        return c;
+    }
+    public int mod(int a, int b) {
+        int c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        int m = k.add(118,17);
+        System.out.println("add ="+m);
+        int n = k.sub(118,17);
+        System.out.println("sub ="+n);
+        int o = k.mul(18,13);
+        System.out.println("mul ="+o);
+        int p = k.mod(118,17);
+        System.out.println("mod ="+p);
+        int q = k.div(118,17);
+        System.out.println("div ="+q);
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    int add(int a, int b);
+    int sub(int a, int b);
+    int mul(int a, int b);
+    int div(int a, int b);
+    int mod(int a, int b);
+}
+class B implements A{
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public int sub(int a, int b) {
+     int c=a-b;
+        return c;
+    }
+    public int mul(int a, int b) {
+        int c=a*b;
+        return c;
+    }
+    public int div(int a, int b) {
+        int c=a/b;
+        return c;
+    }
+    public int mod(int a, int b) {
+        int c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        B k = new B();
+        int m = k.add(a,b);
+        System.out.println("add ="+m);
+        int n = k.sub(a,b);
+        System.out.println("sub ="+n);
+        int o = k.mul(a,b);
+        System.out.println("mul ="+o);
+        int p = k.mod(a,b);
+        System.out.println("mod ="+p);
+        int q = k.div(a,b);
+        System.out.println("div ="+q);
+    }
+}
+
+(5)->
+[A]->
+interface A{
+    void add();
+    void sub();
+}
+interface B {
+    void mul();
+    void div();
+}
+class C implements A,B{
+    public void add() {
+        int a=65, b=21;
+        System.out.println("add ="+(a+b));
+    }
+    public void sub() {
+        int a =65,b=21;
+        System.out.println("sub ="+(a-b));
+    }
+    public void mul() {
+     int a=65, b=21;
+        System.out.println("mul ="+(a*b));
+    }
+    public void div() {
+        int a =65,b=21;
+        System.out.println("div ="+(a/b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new C().add();
+        new C().sub();
+        new C().mul();
+        new C().div();
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    void add();
+    void sub();
+}
+interface B {
+    void mul();
+    void div();
+}
+class C implements A,B{
+    public void add() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("add ="+(a+b));
+    }
+    public void sub() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("sub ="+(a-b));
+    }
+    public void mul() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("mul ="+(a*b));
+    }
+    public void div() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("div ="+(a/b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new C().add();
+        new C().sub();
+        new C().mul();
+        new C().div();
+    }
+}
+
+(6)->
+[A]->
+interface A{
+    int add(int a,int b);
+    void sub(int a,int b);
+}
+interface B{
+    int mul();
+    void div();
+}
+class C implements A,B{
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public void sub(int a, int b) {
+        System.out.println("sub ="+(a-b));
+    }
+    public int mul() {
+     int a=39,b=7;
+        int c=a*b;
+        return c;
+    }
+    public void div() {
+     int a=39,b=7;
+        System.out.println("div ="+(a/b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        int m = k.add(39,7);
+        System.out.println("add="+m);
+        k.sub(39,7);
+        System.out.println("mul ="+k.mul());
+        k.div();
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A{
+    int add(int a,int b);
+    void sub(int a,int b);
+}
+interface B{
+    int mul();
+    void div();
+}
+class C implements A,B{
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public void sub(int a, int b)
+    {
+        System.out.println("sub ="+(a-b));
+    }
+    public int mul() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a*b;
+        return c;
+    }
+    public void div() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("div ="+(a/b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int m = k.add(a,b);
+        System.out.println("add="+m);
+        k.sub(a,b);
+        System.out.println("mul ="+k.mul());
+        k.div();
+    }
+}
+
+(9)->
+[A]->
+class B implements A{
+    @Override
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+
+    @Override
+    public void sub(int a, int b) {
+        System.out.println("sub ="+(a-b));
+    }
+
+    @Override
+    public int mul() {
+        int a=34,b=23;
+        int c=a*b;
+        return c;
+    }
+
+    @Override
+    public void div(int a, int b) {
+        System.out.println("div ="+(a/b));
+    }
+}
+interface A{
+    int add(int a,int b);
+    void sub(int a,int b);
+    int mul();
+    void div(int a,int b);
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        int m = k.add(34,19);
+        System.out.println("add ="+m);
+        new B().sub(67,31);
+        System.out.println("mul ="+k.mul());
+        new B().div(87,23);
+    }
+}
+
+[B]->
+import java.util.Scanner;
+class B implements A{
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public void sub(int a, int b) {
+        System.out.println("sub ="+(a-b));
+    }
+    public int mul() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a = sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        int c=a*b;
+        return c;
+    }
+    public void div(int a, int b) {
+        System.out.println("div ="+(a/b));
+    }
+}
+interface A{
+    int add(int a,int b);
+    void sub(int a,int b);
+    int mul();
+    void div(int a,int b);
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a = sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        int m = k.add(a,b);
+        System.out.println("add ="+m);
+        new B().sub(a,b);
+        System.out.println("mul ="+k.mul());
+        new B().div(a,b);
+    }
+}
+
+(10)->
+[A]->
+interface A {
+    void add();
+    int sub(int a, int b);
+
+    interface B {
+        void add(int a, int b);
+        int sub1(int a, int b);
+    }
+}
+class C implements A.B{
+    public void add() {
+        int a=43,b=21;
+        System.out.println("addition ="+(a+b));
+    }
+    public int sub(int a, int b) {
+        int c=a-b;
+        return c;
+    }
+    public void add(int a, int b) {
+        System.out.println("add="+(a+b));
+    }
+    public int sub1(int a, int b) {
+        int c=a-b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k =new C();
+        new C().add();
+        int m = k.sub(88,22);
+        System.out.println("sub ="+m);
+        new C().add(81,21);
+        int n = k.sub1(88,33);
+        System.out.println("sub 2="+n);
+    }
+}
+
+[B]->
+import java.util.Scanner;
+interface A {
+    void add();
+    int sub(int a, int b);
+
+    interface B {
+        void add(int a, int b);
+        int sub1(int a, int b);
+    }
+}
+class C implements A.B{
+    public void add() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a= sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        System.out.println("addition ="+(a+b));
+    }
+    public int sub(int a, int b) {
+        int c=a-b;
+        return c;
+    }
+    public void add(int a, int b) {
+        System.out.println("add="+(a+b));
+    }
+    public int sub1(int a, int b) {
+        int c=a-b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a= sc.nextInt();
+        System.out.println("b =");
+        int b= sc.nextInt();
+        C k =new C();
+        new C().add();
+        int m = k.sub(a,b);
+        System.out.println("sub ="+m);
+        new C().add(a,b);
+        int n = k.sub1(a,b);
+        System.out.println("sub 2="+n);
+    }
+}
+
+(11)->
+[A]->
+interface A{
+    void add1();
+    int sub(int a,int b);
+    interface B{
+        void add(int a,int b);
+        int sub1(int a,int b);
+    }
+}
+public class Main implements A.B {
+    public static void main(String[] args) {
+        Main k=new Main();
+        new Main().add1();
+        int m= k.sub(88,44);
+        System.out.println("sub="+m);
+        new Main().add(88,44);
+        int n = k.sub1(77,2);
+        System.out.println("sub1="+n);
+    }
+   public void add1(){
+        int a=51,b=28;
+       System.out.println("add"+(a+b));
+   }
+   public int sub(int a,int b){
+        int c=a-b;
+        return c;
+    }
+    public void add(int a, int b) {
+        System.out.println("addition ="+(a+b));
+    }
+    public int sub1(int a, int b) {
+        int c=a-b;
+        return c;
+    }
+}

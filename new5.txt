@@ -1,0 +1,201 @@
+(1)leap year
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int y;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the year=");
+        y=sc.nextInt();
+
+        if(y%4==0){
+            System.out.println("leap year");
+        }
+        else{
+            System.out.println("not leap year");
+        }
+    }
+}
+
+(2) celsius to fahrenheit
+(a)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int c;
+        int f;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the temperature=");
+        c=sc.nextInt();
+        f=(9/5)*c+32;
+        System.out.println("temperature in fahrenheit :"+f);
+
+
+    }
+}
+(b) fahrenheit to celsius
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int c;
+        int f;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the temperature=");
+        f=sc.nextInt();
+        c=(f-32)*5/9;
+        System.out.println("temperature in celsius :"+c);
+
+
+    }
+}
+
+(4)
+import java.util.Scanner;
+class Alphabet_digit{
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a character=");
+        char ch = input.next().charAt(0);
+        if(ch>='a' && ch<='z') {
+            System.out.println("alphabbet");
+        }
+        else{
+            System.out.println("digit");
+
+        }
+
+
+
+    }
+}
+(5)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int m;
+        int e;
+        int h;
+        int s;
+        int sum,per;
+        int total=400;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println(" enter maths marks=");
+        m = input.nextInt();
+        System.out.println(" enter english marks=");
+        e = input.nextInt();
+        System.out.println(" enter hindi marks=");
+        h = input.nextInt();
+        System.out.println(" enter science marks=");
+        s = input.nextInt();
+        sum = m+e+h+s;
+        per=(sum/total*100);
+        if (per > 80) {
+            System.out.println("grade A");
+
+            }
+
+        else if(per<80 || per>=60 ){
+            System.out.println("grade B");
+        }
+        else if(per<60 || per>50 ){
+            System.out.println("grade c");
+        }
+        else if(per<50 || per>45 ){
+            System.out.println("grade d");
+        }
+        else if(per<45 || per>25 ){
+            System.out.println("grade e");
+        }
+        else {
+            System.out.println("fail");
+        }
+
+
+
+    }
+}
+(6)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int h;
+        Scanner input = new Scanner(System.in);
+        System.out.println(" enter height=");
+        h = input.nextInt();
+        if (h >= 160) {
+            System.out.println("high");
+        }
+        else if(h<160 && h>=140 ){
+            System.out.println("mid");
+        }
+        else {
+            System.out.println("low");
+        }
+    }
+}
+(8)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        int m;
+        int e;
+        int h;
+        int s,ss;
+        int sum,per;
+        int total=400;
+        Scanner input = new Scanner(System.in);
+
+        System.out.println(" enter maths marks=");
+        m = input.nextInt();
+        System.out.println(" enter english marks=");
+        e = input.nextInt();
+        System.out.println(" enter hindi marks=");
+        h = input.nextInt();
+        System.out.println(" enter science marks=");
+        s = input.nextInt();
+        System.out.println(" enter social science marks=");
+        ss = input.nextInt();
+        sum = m+e+h+s;
+        System.out.println("put the value of sum"+sum);
+        per=(sum/total*100);
+        System.out.println("put the value of per"+per);
+        if (per > 80) {
+            System.out.println("grade A");
+        }
+        else if(per<80 || per>=60 ){
+            System.out.println("grade B");
+        }
+        else if(per<60 || per>50 ){
+            System.out.println("grade c");
+        }
+        else if(per<50 || per>45 ){
+            System.out.println("grade d");
+        }
+        else {
+            System.out.println("fail");
+        }
+    }
+}
+(10)
+import java.util.Scanner;
+class Upper_Lower
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value :");
+        char ch = input.next().charAt(0);
+        if(ch>='a' && ch<='z')
+        {
+            System.out.println("This is a Lowercase Alphabet");
+        }
+        else if(ch>='A' && ch<='Z')
+        {
+            System.out.println("This is a Uppercase Alphabet");
+        }
+        else{
+            System.out.println("digit");
+        }
+    }
+}

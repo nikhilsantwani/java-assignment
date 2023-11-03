@@ -1,0 +1,21 @@
+(1)->
+
+public class Main{
+    public static void main(String[] args) {
+        int num = 33, i = 1;
+        boolean flag = false;
+        while (i <= 100) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+            i++;
+        }
+        if (flag == true) {
+            System.out.println("prime number");
+        } else {
+            System.out.println("not a prime number");
+        }
+    }
+}
+

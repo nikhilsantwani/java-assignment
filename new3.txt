@@ -1,0 +1,264 @@
+(1)Area
+(a)-> Area of circle
+public class Main{
+    public static void main(String[] args){
+        int radius=5;	
+        float pi=3.14f,area;
+        area = pi*radius*radius;
+        System.out.println(area);
+    }
+}
+
+(b)-> Area of square
+public class Main{
+    public static void main(String[] args){
+        int side=9;
+        int area;
+        area = side*side;
+        System.out.println(area);
+    }
+}
+(c)-> Area of rectangle
+public class Main{
+    public static void main(String[] args){
+        int length=9,breadth=15;
+        int area;
+        area = length*breadth;
+        System.out.println(area);
+    }
+}
+(d)-> Area of sphere
+public class Main{
+    public static void main(String[] args){
+        int radius=5;
+        float pi=3.14f, area;
+        area = 4*pi*radius*radius;
+        System.out.println(area);
+    }
+}
+
+(2)volume
+(a)-> vol. of circle
+public class Main{
+    public static void main(String[] args){
+        int radius=5;
+        float pi=3.14f,height=6, volume;
+        volume = pi*radius*radius*height;
+        System.out.println(volume);
+    }
+}
+
+(b)->vol. of square
+public class Main{
+    public static void main(String[] args){
+        int side=5,volume;
+
+        volume = side*side*side;
+        System.out.println(volume);
+    }
+}
+
+(c)->vol. of rectangle
+public class Main{
+    public static void main(String[] args){
+        int length=5,width=7,height=8,volume;
+
+        volume = length*width*height;
+        System.out.println(volume);
+    }
+}
+
+(d)-> vol. of cylinder
+public class Main{
+    public static void main(String[] args){
+        int radius=5,height=8;
+        float pi=3.14f,volume;
+
+        volume = pi*radius*radius*height;
+        System.out.println(volume);
+    }
+}
+(e)-> vol. of sphere
+public class Main{
+    public static void main(String[] args){
+        int radius=6;
+        float pi=3.14f,volume;
+
+        volume = 4/3*pi*radius*radius*radius;
+        System.out.println(volume);
+    }
+}
+
+(3) celsius-> fahrenheit
+public class Main
+        {
+public static void main (String[] args)
+        { float Fahrenheit, Celsius;
+        Celsius= 17;
+        Fahrenheit =((Celsius*9)/5)+32;
+        System.out.println("Temperature in Fahrenheit is: "+Fahrenheit);
+        }
+        }
+(4)kelvin to celsius
+public class Main
+        {
+public static void main (String[] args)
+        { float kelvin, Celsius;
+        kelvin= 17;
+        Celsius= kelvin-273.5f;
+        System.out.println("Temperature in Fahrenheit is: "+Celsius);
+        }
+        }
+
+(5)
+
+public class Main {
+    public static void main(String... args) {
+        String name = " hello";
+        System.out.println("world "+name);
+    }
+(6)
+public class Main{
+    public static void main(String[] args){
+        String name = "amit";
+        System.out.println(name+ " is a developer");
+    }
+}
+(7)
+public class Main{
+    public static void main(String[] args){
+        String name = "mango";
+        System.out.println(name+ " is a king");
+    }
+}
+
+(8)
+public class Main{
+    public static void main(String[] args){
+        String name = "you";
+        System.out.println(name+ " are the best");
+    }
+}
+
+(9)
+public class Main{
+    public static void main(String[] args){
+        String name = "earth";
+        System.out.println("this is a "+name);
+    }
+}
+
+(10)
+public class Main{
+    public static void main(String[] args){
+        String name = "hello";
+        System.out.println("hii " +name+ " how are you");
+    }
+}
+(11)27+78*34
+public class Main{
+    public static void main(String[] args){
+        int a=27,b=78,c=34,d;
+        d=a+b*c;
+        System.out.println(d);
+
+    }
+}
+
+(12)
+public class Main{
+    public static void main(String[] args){
+        int a=23,b=78,c=34,d=7,e;
+        e=a+b-(c-d);
+        System.out.println(e);
+
+    }
+}
+(13)
+public class Main{
+    public static void main(String[] args){
+        float a=1.2f,b=4.5f,c=1.2f,d=2.3f,e=45f,f;
+       f=a+b*c-(d*e);
+        System.out.println(f);
+
+    }
+((
+}
+
+(14)
+public class Main{
+    public static void main(String[] args){
+       int a=23,b=23,c=67,d=23,e=2,f=2,g;
+      g=a*b+c-(d*e)/f;
+        System.out.println(g);
+
+    }
+}
+
+(15)
+public class Main{
+    public static void main(String[] args){
+       int a=34,b=56,c=23,d=12,e=23,f;
+      f=a+b-c*(d%e);
+        System.out.println(f);
+
+    }
+}
+
+(16)
+public class Main{
+    public static void main(String[] args){
+        float a=5.6f,f;
+       int b=2,c=23,d=12,e=23;
+      f=(a*b-c)-d%e;
+        System.out.println(f);
+
+    }
+}
+(17)
+public class Main{
+    public static void main(String[] args){
+
+       int a=1,b=34,c=78,d;
+      d=a+b/c;
+        System.out.println(d);
+
+    }
+}
+
+(18)
+public class Main{
+    public static void main(String[] args){
+
+       int a=32,b=2,c;
+       c=a/b;
+
+
+        System.out.println(c);
+
+    }
+}
+(19)
+public class Main{
+    public static void main(String[] args){
+
+       int a=24,b=2,c;
+       c=a%b;
+
+
+        System.out.println(c);
+
+    }
+}
+
+(20)
+public class Main{
+    public static void main(String[] args){
+
+       int a=34,c=12,d=98,f=9;
+       float b=2.3f,e=3.4f,g;
+       g=a+b*(c-d*e)-f;
+        System.out.println(g);
+
+    }
+}

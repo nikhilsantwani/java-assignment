@@ -1,0 +1,29 @@
+interface A {
+    int add(int a, int b);
+
+    void sub(int a, int b);
+
+    int mul();
+
+    void div(int a, int b);
+}
+public class Main implements A{
+    public static void main(String[] args) {
+
+    }
+    public int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    public void sub(int a, int b) {
+        System.out.println("sub ="+(a-b));
+    }
+    public int mul() {
+        int a=34,b=18;
+        int c=a*b;
+        return c;
+    }
+    public void div(int a, int b) {
+        System.out.println("div ="+(a/b));
+    }
+}

@@ -1,0 +1,117 @@
+(1)->
+class person{
+    private int age;
+    private String name;
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public int getAge(int age) {
+        return age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        person k = new person();
+        k.setAge(22);
+        k.setName("person");
+        System.out.println(k.getAge(22));
+        System.out.println(k.getName());
+    }
+}
+
+(2)->
+class person{
+    private int age,studentid;
+    private String name;
+    public void setStudentid(int studentid) {
+        this.studentid = studentid;
+    }
+    public int getStudentid() {
+        return studentid;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public int getAge(int age) {
+        return age;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
+    }
+}
+class student extends person{
+
+}
+public class Main {
+    public static void main(String[] args) {
+        student k = new student();
+        k.setStudentid(33);
+        System.out.println("student id ="+k.getStudentid());
+        k.setAge(22);
+        System.out.println("age ="+k.getAge(22));
+        k.setName("Akash");
+        System.out.println("name ="+k.getName());
+    }
+}
+
+(3)->
+interface shape{
+    void caluculateArea();
+}
+class circle implements shape{
+    public void caluculateArea() {
+        float area,pi=3.14f;
+        int r=4;
+        System.out.println("area of rectangle ="+(area = pi*r*r));
+    }
+}
+class rectangle implements shape{
+    public void caluculateArea() {
+        int area,b=4,l=6;
+        System.out.println("area of rectangle ="+(area =l*b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        circle k = new circle();
+        k.caluculateArea();
+        rectangle l = new rectangle();
+        l.caluculateArea();
+    }
+}
+
+(5)->
+abstract class animal{
+    abstract void makeSound();
+}
+class dog extends animal{
+    void makeSound() {
+        System.out.println("dog sound");
+    }
+}
+class cat extends animal{
+    void makeSound() {
+        System.out.println("cat sound");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        dog k = new dog();
+        k.makeSound();
+        cat l = new cat();
+        l.makeSound();
+    }
+}
+
+(6)->

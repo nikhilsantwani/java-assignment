@@ -1,0 +1,83 @@
+(1)->
+public class Main
+{
+    static boolean isPrime(int n){
+        if(n==1||n==0)
+            return false;
+        for(int i=2; i<n; i++){
+            if(n%i==0)
+                return false;
+        }
+        return true;
+    }
+    public static void main (String[] args)
+    {
+        int N = 20;
+        for(int i=1; i<=N; i++){
+            if(isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+
+    }
+}
+(3)->
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("information =");
+        System.out.println("income =");
+        int income = sc.nextInt();
+        if(income<=10000){
+            System.out.println("you are tax free");
+        }
+        if (income>=10001 && income<=30000){
+            System.out.println("10% tax");
+        }
+        if (income>=30001 && income<=60000);
+    }
+        else {
+            System.out.println("30% tax");
+        }
+    }
+}
+
+
+
+(10)->
+interface  vehical{
+    String bike();
+    int time();
+    int price();
+}
+class customer implements vehical{
+    @Override
+    public String bike() {
+        String bike = "splendor";
+        return bike;
+    }
+
+    @Override
+    public int time() {
+       int hour = 6;
+        return hour;
+    }
+
+    @Override
+    public int price() {
+        int price = 79*6;
+        return price;
+    }
+}
+class rental extends customer{
+
+}
+public class Main {
+    public static void main(String[] args) {
+        rental l = new rental();
+        System.out.println(l.bike());
+        System.out.println("time="+l.time()+" hr");
+        System.out.println("rent="+l.price()+" rs");
+    }
+}

@@ -1,0 +1,156 @@
+(1)->
+public class Main {
+    public static void main(String... args) {
+        String name = " nikhil";
+        System.out.println("my name is" +name);
+    }
+}
+
+(2)
+(a)-> byte a=123
+public class Main {
+    public static void main(String[] args) {
+        byte a=123;
+        System.out.println("the value of a is : " +a);
+    }
+}
+
+(b)-> byte a=-67
+public class Main {
+    public static void main(String[] args) {
+        byte a=-67;
+        System.out.println("the value of a is : " +a);
+    }
+}
+
+(c)-> byte a=189
+invalid
+
+public class Main {
+    public static void main(String[] args) {
+        short a= 189;
+        System.out.println("the value of a is : " +a);
+    }
+
+(d)-> byte = 0
+public class Main {
+    public static void main(String[] args) {
+        byte a= 0;
+        System.out.println("the value of a is : " +a);
+    }
+}
+
+(3)
+(a)-> short =34567
+public class Main {
+    public static void main(String[] args) {
+        short a= 34567;
+        System.out.println("the value of a is : " +a);
+    }
+}
+-->> incompatible type
+
+(b)-> short a=0
+public class Main {
+    public static void main(String[] args) {
+        short a= 0;
+        System.out.println("the value of a is : " +a);
+    }
+}
+
+(c)-> short a=32345
+public class Main{
+    public static void main(String[] args){
+        short a= 32345;
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(d)-> short a=-3275
+public class Main{
+    public static void main(String[] args){
+        short a= -3275;
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(5)-> 
+(a) char a=r
+public class Main{
+    public static void main(String[] args){
+        char a= 'r';
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(b) char a=u
+public class Main{
+    public static void main(String[] args){
+        char a= 'u';
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(c) char a=@
+public class Main{
+    public static void main(String[] args){
+        char a= '@';
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(d) char a='$'
+public class Main{
+    public static void main(String[] args){
+        char a= '$';
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(e) char a='!'
+public class Main{
+    public static void main(String[] args){
+        char a= '!';
+        System.out.printf("the value of a is : " +a);
+    }
+}
+
+(f) char a='~'
+public class Main{
+    public static void main(String[] args){
+        char a= '~';
+        System.out.printf("the value of a is : " +a);
+    }
+(6) how are : you
+public class Main {
+    public static void main(String... args) {
+        String a = " you";
+        System.out.println("How are :" + a);
+    }
+}
+(7) "Hello" +"world"
+public class Main {
+    public static void main(String... args) {
+        String a = " + world";
+        System.out.println( "Hello " +a);
+    }
+}
+
+(9) "what is your name " name
+public class Main {
+    public static void main(String... args) {
+        String name = " nikhil";
+        System.out.println( "what is your name " +name);
+    }
+}
+
+(10)  your name  is : name
+public class Main {
+    public static void main(String... args) {
+        String name = " nikhil";
+        System.out.println( "your name : " +name);
+    }
+}
+
+
+

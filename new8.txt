@@ -1,0 +1,298 @@
+1)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int week;
+        week = sc.nextInt();
+        switch(week){
+            case 1:
+                System.out.println("sunday");
+                break;
+            case 2:
+                System.out.println("monday");
+                break;
+            case 3:
+                System.out.println("tuesday");
+                break;
+            case 4:
+                System.out.println("wensday");
+                break;
+            case 5:
+                System.out.println("thursday");
+                break;
+            case 6:
+                System.out.println("friday");
+                break;
+            case 7:
+                System.out.println("saturday");
+                break;
+        }
+    }
+}
+2)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int a;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextInt();
+        switch(a){
+            case 1:
+                System.out.println("hii");
+        break;
+        case 2:
+        System.out.println("hello");
+        break;
+            case 3:
+                System.out.println("how are you");
+                break;
+            case 4:
+                System.out.println("what is your name");
+                break;
+            case 5:
+                System.out.println("bye");
+                break;
+            default:
+                System.out.println("this is wrong input");
+    }
+    }
+
+}
+3)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter alphabate");
+        ch = sc.next().charAt(0);
+
+        switch (ch){
+            case 'a':
+            case 'e':
+            case 'i':
+            case'o':
+            case'u':
+                System.out.println(ch+ " is vowel");
+                break;
+            default:
+                System.out.println(ch+" is consonant");
+
+        }
+    }
+}
+4)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter alphabate");
+        ch = sc.next().charAt(0);
+        switch (ch){
+            case 'm':
+                System.out.println("male");
+                break;
+            case 'f':
+                System.out.println("female");
+                break;
+            case 'e':
+            case'p':
+                System.out.println("not a gender");
+                break;
+        }
+    }
+}
+
+5)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char operator;
+        int n1,n2,result;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter operator : +");
+        operator = sc.next().charAt(0);
+
+        System.out.println("enter number 1 =");
+        n1 = sc.nextInt();
+        System.out.println("enter number 2 =");
+        n2 = sc.nextInt();
+        switch (operator){
+            case '+' :
+                result = n1+n2;
+                System.out.println(result);
+        }
+    }
+}
+6)->import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int month;
+        month = sc.nextInt();
+        switch(month){
+            case 1:
+                System.out.println("january");
+                break;
+            case 2:
+                System.out.println("february");
+                break;
+            case 3:
+                System.out.println("march");
+                break;
+            case 4:
+                System.out.println("aprail");
+                break;
+            case 5:
+                System.out.println("may");
+                break;
+            case 6:
+                System.out.println("june");
+                break;
+            case 7:
+                System.out.println("july");
+                break;
+            case 8:
+                System.out.println("august");
+                break;
+            case 9:
+                System.out.println("september");
+                break;
+            case 10:
+                System.out.println("october");
+                break;
+            case 11:
+                System.out.println("november");
+                break;
+            case 12:
+                System.out.println("december");
+                break;
+        }
+    }
+}
+7)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter num=");
+        num = sc.nextInt();
+        switch(num%2){
+            case 0 :
+                System.out.println(num+" even");
+                break;
+            case 1:
+                System.out.println(num+ "  odd");
+                break;
+        }
+    }
+}
+9)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        ch = sc.next().charAt(0);
+        switch(ch){
+            case 'r':
+                System.out.println("reverse");
+                break;
+            case 'p':
+                System.out.println("pallindrome");
+                break;
+            case 'a':
+                System.out.println("armstrong");
+                break;
+            case 'm':
+                System.out.println("prime number");
+                break;
+            case 'f':
+                System.out.println("fibonacci");
+                break;
+            case 'w':
+                System.out.println("factorrial");
+                break;
+            case 's':
+                System.out.println("swap number");
+                break;
+        }
+    }
+
+}
+
+8)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter =");
+        ch = sc.next().charAt(0);
+        switch(ch){
+            case 't':{
+                double b=5,h=7;
+                double area=0.5*(b*h);
+                System.out.println("area of triangle is" +area);
+            break;
+            }
+            case 'c':{
+                double area,r=8,pi=3.14;
+                area = pi*r*r;
+                System.out.println("area of circle is =" +area);
+                break;
+            }
+            case 's':{
+                double area,l=8,h=3.14;
+                area = l*h;
+                System.out.println("area of square is=" +area);
+                break;
+            }
+        }
+    }
+}
+10)->
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        char swap;
+        int n1,n2,n3=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("swap type =");
+        swap = sc.next().charAt(0);
+        System.out.println("enter value of n1 =");
+        n1 = sc.nextInt();
+        System.out.println("enter value of n2 =");
+        n2 = sc.nextInt();
+        switch(swap){
+            case 'm' : {
+                n1 = n1 * n2;
+                n2 = n1 / n2;
+                n1 = n1 / n2;
+                System.out.println("value of n1=" + n1);
+                System.out.println("value of n2=" + n2);
+                break;
+            }
+            case 'a' : {
+                n1 = n1 + n2;
+                n2 = n1 - n2;
+                n1 = n1 - n2;
+                System.out.println("value of n1=" + n1);
+                System.out.println("value of n2=" + n2);
+                break;
+            }
+            case 't' : {
+                n1 = n3;
+                n1 = n2;
+                n2 = n3;
+                System.out.println("value of n1=" + n1);
+                System.out.println("value of n2=" + n2);
+                break;
+            }
+
+        }
+    }
+}

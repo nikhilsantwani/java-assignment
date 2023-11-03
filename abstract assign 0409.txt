@@ -1,0 +1,561 @@
+(1)->
+abstract class A{
+    abstract void show();
+    abstract void show1();
+    abstract void show2();
+    abstract void show3();
+}
+class B extends A{
+    void show() {
+        System.out.println("hii");
+    }
+    void show1() {
+        System.out.println("hiii");
+    }
+    void show2() {
+        System.out.println("hiiii");
+    }
+    void show3() {
+        System.out.println("hiiiii");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.show();
+        k.show1();
+        k.show2();
+        k.show3();
+    }
+}
+
+(2)->
+abstract class A{
+    abstract void add();
+    abstract void sub();
+    abstract void mul();
+    abstract void div();
+    abstract void mod();
+}
+class B extends A{
+    void add() {
+        int a=43,b=21;
+        System.out.println("add ="+(a+b));
+    }
+    void sub() {
+        int a=43,b=21;
+        System.out.println("sub ="+(a-b));
+    }
+    void mul() {
+        int a=43,b=21;
+        System.out.println("mul ="+(a*b));
+    }
+    void div() {
+        float a=43f,b=21f;
+        System.out.println("div ="+(a/b));
+    }
+    void mod() {
+        int a=43,b=21;
+        System.out.println("mod ="+(a%b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.add();
+        k.sub();
+        k.mul();
+        k.div();
+        k.mod();
+    }
+}
+(3)->
+abstract class A{
+    abstract void add(int a,int b);
+    abstract void sub(int a,int b);
+    abstract void mul(int a,int b);
+}
+ class B extends A{
+
+    void add(int a,int b) {
+        System.out.println("add ="+(a+b));
+    }
+    void sub(int a,int b) {
+        System.out.println("sub ="+(a-b));
+    }
+    void mul(int a,int b) {
+        System.out.println("mul ="+(a*b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.add(23,12);
+        k.sub(43,12);
+        k.mul(8,7);
+    }
+}
+
+(5)->
+abstract class A{
+    abstract int add();
+    abstract int sub();
+    abstract int mul();
+}
+class B extends A{
+    @Override
+    int add() {
+        int a=76,b=34;
+        int c=a+b;
+        return c;
+    }
+    @Override
+    int sub() {
+        int a=34,b=32;
+        int c=a-b;
+        return c;
+    }
+    @Override
+    int mul() {
+        int a=34,b=32;
+        int c=a*b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k =new B();
+        System.out.println(k.add());
+        System.out.println(k.sub());
+        System.out.println(k.mul());
+    }
+}
+
+(6)->
+abstract class A{
+    abstract void add();
+    abstract void sub(int a,int b);
+    abstract int mul(int a,int b);
+    abstract float div();
+}
+class B extends A{
+    void add() {
+        int a=67,b=23;
+        System.out.println("add="+(a+b));
+    }
+    void sub(int a,int b) {
+        System.out.println("sub="+(a-b));
+    }
+    int mul(int a,int b) {
+        int c=a+b;
+        return c;
+    }
+    float div() {
+        int a=54,b=3;
+        int c=a/b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B().add();
+        new B().sub(43,18);
+        B k = new B();
+        int m= k.mul(33,22);
+        System.out.println(m);
+        System.out.println(k.div());
+    }
+}
+
+(7)->
+abstract class A{
+    abstract void add();
+    void sub(){
+        int a=56,b=21;
+        System.out.println("sub ="+(a-b));
+    }
+    abstract void mul();
+    void div(){
+        int a=67,b=4;
+        System.out.println("div="+(a/b));
+    }
+    abstract void mod();
+}
+class B extends A{
+    void add() {
+        int a=76,b=45;
+        System.out.println("add="+(a+b));
+    }
+    void mul() {
+     int a=45,b=3;
+        System.out.println("mul="+(a*b));
+    }
+    void mod() {
+     int a=47,b=6;
+        System.out.println("mod="+(a%b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k= new B();
+        k.add();
+        k.sub();
+        k.mul();
+        k.div();
+        k.mod();
+    }
+}
+
+(8)->
+abstract class A{
+    abstract void add(int a,int b);
+    void sub(int a, int b){
+        System.out.println("sub ="+(a-b));
+    }
+    abstract void mul(int a,int b);
+    void div(int a,int b){
+        System.out.println("div ="+(a/b));
+    }
+    abstract void mod(int a,int b);
+}
+class B extends A{
+    void add(int a,int b) {
+        System.out.println("add = "+(a+b));
+    }
+    void mul(int a,int b) {
+        System.out.println("mul ="+(a*b));
+    }
+    void mod(int a,int b) {
+        System.out.println("mod ="+(a%b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k =new B();
+        k.add(99,9);
+        k.sub(88,8);
+        k.mul(7,99);
+        k.div(66,6);
+        k.mod(77,10);
+    }
+}
+
+(9)->
+abstract class A{
+    abstract int add();
+    int sub(){
+        int a=32, b=21;
+        int c=a-b;
+        return c;
+    }
+    abstract int mul();
+    int div (){
+        int a=78,b=21;
+        int c=a/b;
+        return c;
+    }
+    abstract int mod();
+}
+class B extends A{
+    int add(){
+        int a=34,b=31;
+        int c=a+b;
+        return c;
+    }
+    int mul(){
+        int a=34,b=31;
+        int c=a*b;
+        return c;
+    }
+    int mod() {
+        int a=34,b=3;
+        int c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        System.out.println(k.add());
+        System.out.println(k.sub());
+        System.out.println(k.mul());
+        System.out.println(k.div());
+        System.out.println(k.mod());
+    }
+}
+
+(10)->
+abstract class A{
+    abstract int add(int a,int b);
+    int sub(int a,int b){
+        int c=a-b;
+        return c;
+    }
+    abstract int mul(int a,int b);
+    int div(int a,int b){
+        int c=a/b;
+        return c;
+    }
+    abstract int mod(int a,int b);
+}
+class B extends A{
+    int add(int a,int b) {
+        int c=a+b;
+        return c;
+    }
+    int mul(int a, int b) {
+        int c=a*b;
+        return c;
+    }
+    int mod(int a, int b) {
+        int c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+       B k = new B();
+        int m = k.add(22,11);
+        int n= k.sub(87,43);
+        int o = k.mul(51,4);
+        int p = k.div(65,3);
+        int q = k.mod(37,5);
+        System.out.println("add="+m);
+        System.out.println("sub="+n);
+        System.out.println("mul="+o);
+        System.out.println("div="+p);
+        System.out.println("mod="+q);
+    }
+}
+
+(11)->
+abstract class A{
+    abstract int add(int a,int b);
+    int sub(){
+        int a=34, b=17;
+        int c=a-b;
+        return c;
+    }
+    abstract void mul(int a,int b);
+    int div(int a,int b){
+    int c=a/b;
+    return c;
+    }
+}
+class B extends A{
+    int add(int a, int b) {
+        int c=a+b;
+        return c;
+    }
+    void mul(int a, int b) {
+        System.out.println("mul ="+(a*b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        int m = k.add(67,43);
+        System.out.println("add="+m);
+        System.out.println("sub="+k.sub());
+        new B().mul(3,4);
+        int n = k.div(87,9);
+        System.out.println("div ="+n);
+    }
+}
+
+(12)->
+abstract class A{
+    abstract void add();
+    abstract void sub();
+}
+abstract class B extends A{
+    abstract void mul();
+    abstract void div();
+}
+class C extends A{
+    void add() {
+        int a=34,b=21;
+        System.out.println(a+b);
+    }
+     void sub() {
+        int a=34,b=21;
+        System.out.println(a-b);
+    }
+    void mul() {
+        int a=34,b=21;
+        System.out.println(a*b);
+    }
+     void div() {
+        int a=34,b=21;
+        System.out.println(a/b);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        k.add();
+        k.sub();
+        k.mul();
+        k.div();
+    }
+}
+
+(13)->
+abstract class A{
+    abstract int add(int a,int b);
+    abstract void sub(int a,int b);
+}
+abstract class B extends A{
+    abstract int mul();
+    abstract int div(int a, int b);
+}
+class C extends B{
+    int add(int a, int b) {
+    int c=a+b;
+        return c;
+    }
+    void sub(int a, int b) {
+        System.out.println("sub="+(a-b));
+    }
+    int mul() {
+        int a=73,b=29;
+        int c=a+b;
+        return c;
+    }
+    int div(int a, int b) {
+        int c=a/b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        int m = k.add(65,43);
+        System.out.println("add="+m);
+        new C().sub(83,13);
+        System.out.println("mul="+k.mul());
+        int n= k.div(91,3);
+        System.out.println("div ="+n);
+    }
+}
+
+(14)->
+abstract class A{
+    abstract void show();
+    abstract void show1();
+    abstract void show2();
+    abstract void show3();
+    abstract void show4();
+    abstract void show5();
+    abstract void show6();
+    abstract void show7();
+}
+
+class B extends A{
+    void show() {
+        int a = 53;
+        System.out.println(a);
+    }
+    void show1() {
+        float a = 33.6f;
+        System.out.println(a);
+    }
+    void show2() {
+        short a=3443;
+        System.out.println(a);
+    }
+    void show3() {
+     byte a=122;
+        System.out.println(a);
+    }
+    void show4() {
+     long a =122321;
+        System.out.println(a);
+    }
+    void show5() {
+        char ch='p';
+        System.out.println(ch);
+    }
+    void show6() {
+     double a=77.44;
+        System.out.println(a);
+    }
+    void show7() {
+        System.out.println(false);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new B().show();
+        new B().show1();
+        new B().show2();
+        new B().show3();
+        new B().show4();
+        new B().show5();
+        new B().show6();
+        new B().show7();
+    }
+}
+
+
+(15)->return and no argument
+abstract class A{
+    abstract int show();
+    abstract float show1();
+    abstract short show2();
+    abstract double show3();
+    abstract byte show4();
+    abstract char show5();
+    abstract long show6();
+    abstract boolean show7();
+}
+class B extends A{
+    int show() {
+        int a=56;
+        return a;
+    }
+    float show1() {
+        float a=23.6f;
+        return a;
+    }
+    short show2() {
+     short a=3232;
+        return a;
+    }
+    double show3() {
+     double a=66.33;
+        return a;
+    }
+    byte show4() {
+        byte a=122;
+        return a;
+    }
+    char show5() {
+        char ch='c';
+        return ch;
+    }
+    long show6() {
+        long a=6666;
+        return a;
+    }
+    boolean show7() {
+
+        return false;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        System.out.println(k.show());
+        System.out.println(k.show1());
+        System.out.println(k.show2());
+        System.out.println(k.show3());
+        System.out.println(k.show4());
+        System.out.println(k.show5());
+        System.out.println(k.show6());
+        System.out.println(k.show7());
+    }
+}
+
+
+

@@ -1,0 +1,76 @@
+(1)->
+class A{
+    int a;
+    int b;
+    void show(int a,int b){
+        this.a = a;
+        this.b =b;
+    }
+}
+    class B extends A{
+        int c;
+        int d;
+        int e;
+        void show(int c,int d,int e){
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        }
+        }
+class C extends B{
+    int f;
+    void show(int f){
+        this.f = f;
+    }
+    void mul(){
+        System.out.println(a*b*c*d*e*f);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        k.show(5,6);
+        k.show(2,5,7);
+        k.show(8);
+        k.mul();
+    }
+}
+
+(2)->
+class A{
+    int a;
+    int b;
+    void show(int a,int b){
+        this.a =a;
+        this.b =b;
+    }
+}
+class B extends A{
+    int c;
+    int d;
+    void show1(int c,int d){
+        this.c =c;
+        this.d =d;
+    }
+}
+class C extends B{
+    void add(){
+        System.out.println(a+b+c+d);
+    }
+    void mul(){
+        System.out.println(a*b*c*d);
+    }
+    void sub(){
+        System.out.println(a-b-c-d);
+    }
+}
+public class Main {
+public static void main(String[] args) {
+    C k = new C();
+    k.show(45,23);
+    k.show1(35,19);
+    k.add();
+    k.mul();
+    k.sub();
+}
+}

@@ -1,0 +1,71 @@
+1)->
+class Animal {
+    public void eat(){
+        System.out.println(" i am eating");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("1");
+        Animal buzo = new Animal();
+        buzo.eat();
+        buzo.run();
+    }
+    public void run(){
+        System.out.println("i am running");
+    }
+}
+
+2)->
+class Animal {
+    public void eat(){
+        System.out.println(" i am eating");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("1");
+        Animal buzo = new Animal();
+        buzo.eat();
+        buzo.run();
+        Bird sp = new Bird();
+        sp.fly();
+    }
+    public void run(){
+        System.out.println("i am running");
+    }
+}
+class Bird
+{
+    void fly(){
+        System.out.println("i am flying");
+    }
+}
+
+
+
+
+
+
+
+#abstraction-->> abstraction classes
+example-(1)-->>
+abstract class vehicle
+{
+abstract void start();
+}
+class car extends vehicle{
+    void start(){
+        System.out.println("car start with key");
+    }
+}
+class scooter extends vehicle{
+    void start() {
+        System.out.println("scooter start with kick");
+    }
+
+    public static void main(String[] args) {
+        car c =new car();
+        c.start();
+        scooter s = new scooter();
+        s.start();
+    }
+}

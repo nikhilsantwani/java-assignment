@@ -1,0 +1,223 @@
+(1)-> voter id
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int age;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  your age=");
+        age=sc.nextInt();
+        if(age >= 18){
+            System.out.println("you are eligible");
+        }
+        else{
+            System.out.println("you are not eligible");
+        }
+    }
+}
+
+(2)-> a>10
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+        if(a > 10){
+            System.out.println("a is maximum");
+        }
+        else{
+            System.out.println("a is minimum");
+        }
+    }
+}
+(3)->
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+
+        System.out.print("Enter  value of b=");
+        b=sc.nextInt();
+        if(a > b){
+            System.out.println("a is greater ");
+        }
+        else{
+            System.out.println("b is greater");
+        }
+    }
+}
+(4)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+
+        System.out.print("Enter  value of b=");
+        b=sc.nextInt();
+        System.out.print("Enter  value of c=");
+        c=sc.nextInt();
+        if(a > b && a>c){
+            System.out.println("a is greater ");
+        }
+        else if(b>a && b>c){
+            System.out.println("b is greater");
+        }
+        else{
+            System.out.println("c is greater");
+        }
+    }
+}
+(5)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a,b,c,d,e;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+
+        System.out.print("Enter  value of b=");
+        b=sc.nextInt();
+        System.out.print("Enter  value of c=");
+        c=sc.nextInt();
+        System.out.print("Enter  value of d=");
+        d=sc.nextInt();
+        System.out.print("Enter  value of e=");
+        e=sc.nextInt();
+        if(a > b && a>c && a>d && a>e){
+            System.out.println("a is greater ");
+        }
+        else if(b>a && b>c && b>d && b>e){
+            System.out.println("b is greater");
+        }
+        else if(c>a && c>b && c>d && c>e){
+            System.out.println("c is greater");
+        }
+        else if(d>a && d>b && d>c && d>e){
+            System.out.println("d is greater");
+        }
+        else{
+            System.out.println("e is greater");
+        }
+    }
+}
+(6)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        int a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a=");
+        a=sc.nextInt();
+        if(a>0){
+            System.out.println("positive integer");
+        } else if (a < 0) {
+            System.out.println("negative integer");
+        }
+        else{
+            System.out.println("zero");
+        }
+    }
+}
+(9)
+import java.util.Scanner;
+class Upper_Lower
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the Character :");
+		char ch = input.next().charAt(0);			
+		if(ch>='a' && ch<='z')
+		{
+			System.out.println("This is a Lowercase Alphabet");
+		}
+		else
+		{
+			System.out.println("This is a Uppercase Alphabet");
+		}
+	}
+}
+
+(8)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+
+
+        if(a % 7 ==0 && a % 5==0 ){
+            System.out.println("no. is divisible ");
+        }
+
+        else{
+            System.out.println("no. is not divisible");
+        }
+    }
+}
+(10)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args){
+        int a;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter  value of a=");
+        a=sc.nextInt();
+
+
+        if(a % 3 ==0 && a % 7==0 ){
+            System.out.println("no. is divisible ");
+        }
+
+        else{
+            System.out.println("no. is not divisible");
+        }
+    }
+}
+(11)
+public class Main{
+    public static void main(String[] args){
+       int a=20;
+       int b=30;
+        System.out.println("enter the value of a is :+a");
+        System.out.println("enter value of b is :"+b);
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println("the swap value of a is :"+a);
+        System.out.println("the swap value of b is :"+b);
+    }
+}
+7)
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        char ch;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter alphabet");
+        ch = sc.next().charAt(0);
+        if(ch =='a' || ch =='e' || ch =='i' || ch =='o' || ch=='u'){
+            System.out.println("vowel");
+        }
+        else {
+            System.out.println("consonant");
+        }
+    }
+}

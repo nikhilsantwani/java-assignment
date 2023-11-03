@@ -1,0 +1,169 @@
+1)->
+class A{
+    void show(){
+        System.out.println("hello");
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("hii");
+    }
+}
+class C extends A{
+    void show3(){
+        System.out.println("byee");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.show();
+        k.show1();
+        C p = new C();
+        p.show();
+        p.show3();
+    }
+}
+
+(2)->
+class A{
+    void show(){
+        System.out.println("this is A class");
+    }
+}
+class B extends A{
+    void show1(){
+        System.out.println("this is B class");
+    }
+}
+class C extends B{
+    void show2(){
+        System.out.println("this is C class");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        k.show();
+        k.show1();
+        k.show2();
+    }
+}
+
+(3)->
+class A{
+    int show(int a, int b){
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+        return 0;
+    }
+}
+class B extends A{
+    int show1(int a, int b){
+        System.out.println(a-b);
+        return 0;
+    }
+}class C extends B{
+    int show2(int a, int b){
+        System.out.println(a+b);
+        return 0;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        C k = new C();
+        k.show(22,12);
+        k.show1(33,54);
+        k.show2(65,21);
+    }
+}
+
+(4)->
+class A{
+    int show(int a, int b){
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+        return 0;
+    }
+}
+class B extends A{
+    int show1(int a, int b){
+        System.out.println(a-b);
+        return 0;
+    }
+}class C extends A{
+    int show2(int a, int b){
+        System.out.println(a+b);
+        return 0;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B p = new B();
+        p.show(22,12);
+        p.show1(65,22);
+        C k = new C();
+        k.show(22,12);
+        k.show2(65,21);
+    }
+}
+
+(6)->
+class A{
+    void add(){
+        int a=21,b=12;
+        System.out.println("addition =" +(a+b));
+    }
+}
+class B{
+    void sub(){
+        int a=27,b=8;
+        System.out.println("sub  ="+(a-b));
+    }
+}
+class C{
+    void mul(){
+        int a=21,b=12;
+        System.out.println("mul ="+(a*b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.add();
+        B l = new B();
+        l.sub();
+        C m = new C();
+        m.mul();
+    }
+}
+
+(7)->
+class A{
+    void add(){
+        int a=33,b=20;
+        System.out.println("addition =" +(a+b));
+    }
+}
+class B extends A{
+    void sub(){
+        int a=32,b=12;
+        System.out.println("sub  ="+(a-b));
+    }
+}
+class C extends A{
+    void mul(){
+        int a=29,b=14;
+        System.out.println("mul ="+(a*b));
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.add();
+        k.sub();
+        C p = new C();
+        p.add();
+        p.mul();
+    }
+}

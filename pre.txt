@@ -1,0 +1,262 @@
+(1)-> defualt
+a)->
+class A{
+    A(){
+        int a=37,b=39,c;
+    c=a+b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        new A();
+    }
+}
+
+b)->
+class A{
+    A(){
+        int a=17,b=9,c;
+    c=a-b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        new A();
+    }
+}
+c)->class A{
+    A(){
+        int a=3,b=19,c;
+    c=a8b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        new A();
+    }
+}
+
+
+d)->
+class A{
+    A(){
+        float a=17,b=3,c;
+    c=a/b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        new A();
+    }
+}
+(2)-> constructor :-
+(a)class A{
+    A(){
+        System.out.println(" constructor");
+    }
+    void Add(){
+        int a=23,b=21,c;
+        c=a+b;
+        System.out.println(c);
+    }
+
+    public static void main(String[] args) {
+        new A().Add();
+    }
+}
+(b)->
+class A{
+    A (){
+        System.out.println("constructor");
+    }
+    void sub(){
+        int a=45,b=23,c;
+        c=a-b;
+        System.out.println("sub =" +c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A().sub();
+    }
+}
+
+(c)
+->class A{
+    A(){
+        System.out.println(" constructor");
+    }
+    void mul(){
+        int a=99,b=98,c;
+        c=a*b;
+        System.out.println("mul =" +c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A().mul();
+    }
+}
+(d)->
+class A{
+    A(){
+        System.out.println(" constructor");
+    }
+    void div(){
+
+
+        float a=99,b=98,c;
+        c=a/b;
+        System.out.println("div =" +c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A().div();
+    }
+}
+(e)->
+class A{
+    A(){
+        System.out.println(" constructor");
+    }
+    void mod(){
+        float a=78,b=20,c;
+        c=a%b;
+        System.out.println("mod =" +c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A().mod();
+    }
+}
+
+&&&&
+->class A{
+    A(){
+        int a=88,b=2;
+        System.out.println("addition =" +(a+b));
+        System.out.println("sub =" +(a-b));
+        System.out.println("mul =" +(a*b));
+        System.out.println("div =" +(a/b));
+        System.out.println("mod =" +(a%b));
+    }
+}
+public class Main {
+
+    public static void main(String[] args) {
+        A ob=new A();
+    }
+}
+
+(3)->
+class A{
+    A(int a,int b){
+        System.out.println((a+b));
+        System.out.println((a-b));
+        System.out.println((a*b));
+        System.out.println((a/b));
+        System.out.println((a%b));
+    }
+}
+public class Main {
+    public static void main(String args[]){
+        A ob=new A(10,20);
+    }
+}
+
+4) this: constructor
+(a)class A{
+    int a;
+    int b;
+
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void show(){
+        System.out.println(a+b);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A(4,5).show();
+    }
+}
+(b)->class A{
+    int a;
+    int b;
+
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void show(){
+        System.out.println(a-b);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A(12,7).show();
+    }
+}
+
+(c)->
+class A{
+    int a;
+    int b;
+
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void show(){
+        System.out.println(a*b);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A(32,3).show();
+    }
+}
+(d)->
+class A{
+    int a;
+    int b;
+
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void show(){
+        System.out.println(a/b);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A(93,3).show();
+    }
+}
+(e)->
+class A{
+    int a;
+    int b;
+
+    A(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+    void show(){
+        System.out.println(a%b);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A(73,5).show();
+    }
+}

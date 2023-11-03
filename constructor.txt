@@ -1,0 +1,300 @@
+2)addition (b) constant
+class A {
+    A() {
+        int a = 23, b = 68, c;
+        c = a + b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+        A K = new A();
+    }
+}
+ (a) user input 
+import java.util.Scanner;
+class C {
+    C() {
+        int a , b , c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c = a + b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new C();
+        C K = new C();
+    }
+}
+
+4) sub
+a)-> user input
+import java.util.Scanner;
+class C {
+    C() {
+        int a , b , c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c = a - b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new C();
+        C K = new C();
+    }
+}
+(b)->constant
+class A{
+    A() {
+
+        int a = 65, b = 54, c;
+        c=a-b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A();
+        A k = new A();
+    }
+}
+(5) multiplication
+b)->constant
+class A{
+    A() {
+
+        int a = 34, b = 36, c;
+        c=a*b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A();
+        A k = new A();
+    }
+a) -> user input
+import java.util.Scanner;
+class A {
+    A() {
+        int a , b , c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c = a * b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+        A K = new A();
+    }
+}
+6)
+(a)-> user input 
+ import java.util.Scanner;
+class A {
+    A() {
+        int a , b , c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c = a%b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+        A K = new A();
+    }
+}
+
+b) -> constant
+class A{
+    A() {
+
+        int a = 77, b = 5, c;
+        c=a%b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A();
+        A k = new A();
+    }
+}
+7)DIVISION
+(A)->User i/p
+import java.util.Scanner;
+class A {
+    A() {
+        float a , b , c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextFloat();
+        System.out.println("enter value of b =");
+        b = sc.nextFloat();
+        c = a/b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A();
+        A K = new A();
+    }
+}
+
+(b) constant
+->class A{
+    A() {
+        float a = 76f, b = 3f, c;
+        c=a/b;
+        System.out.println(c);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        new A();
+        A k = new A();
+    }
+}
+
+(8)->
+class A {
+    A() {
+        System.out.println("this is a connstructor part");
+    }
+    void show1(){
+        System.out.println("hello");
+    }
+    void show2(){
+        System.out.println("hii");
+    }
+    void show3(){
+        System.out.println("how are you");
+    }
+    void show4(){
+        System.out.println("tata");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A().show1();
+        new A().show2();
+        new A().show3();
+        new A().show4();
+    }
+}
+
+9)->
+class A {
+    A() {
+        System.out.println("airthmatic operation");
+    }
+    void add(){
+        int a=25, b=54,c;
+        c=a+b;
+        System.out.println(c);
+    }
+    void sub(){
+        int a=25, b=54,c;
+        c=a-b;
+        System.out.println(c);
+    }
+    void div(){
+        int a=45, b=3,c;
+        c=a/b;
+        System.out.println(c);
+    }
+    void mul(){
+        int a=25, b=54,c;
+        c=a*b;
+        System.out.println(c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A().add();
+        new A().sub();
+        new A().div();
+        new A().mul();
+    }
+}
+
+10)->
+class A {
+    A() {
+        System.out.println("operation");
+    }
+    void reverse(){
+        int num =3452, reverse=0,rem;
+        while(num != 0){
+            rem = num% 10;
+            reverse = reverse *10 + rem;
+            num = num/10;
+        }
+        System.out.println("reverse mo.");
+    }
+    void pallindrome(){
+        int num=454;
+        int sum=0,r,temp;
+        temp=num;
+        while(num>0){
+            r=num%10;
+            sum=(sum*10)+r;
+            num=num/10;
+        }
+        if(sum==temp){
+            System.out.println("palindrome no.");
+        }
+        else{
+            System.out.println("not pallindrome no.");
+        }
+    }
+    void swap(){
+        int a =36,b=23;
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        System.out.println("value of a=" +a);
+        System.out.println("value of b="+b);
+    }
+    void factorial(){
+        int n1=0,n2=1,n3,i,count=10;
+        System.out.println(n1+""+n2);
+
+        for(i=2;i<count;++i){
+            n3=n1+n2;
+            System.out.println(""+n3);
+            n1=n2;
+            n2=n3;
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        new A().reverse();
+        new A().pallindrome();
+        new A().swap();
+        new A().factorial();
+    }
+}

@@ -1,0 +1,726 @@
+(1)
+(A)->constant
+//A.java
+class A {
+    void Add(){
+        int a=32,b=19;
+        System.out.println("add="+(a+b));
+    }
+    void sub(){
+        int a=67,b=23;
+        System.out.println("sub="+(a-b));
+    }
+    void mul(){
+        int a=12,b=8;
+        System.out.println("mul="+(a*b));
+    }
+    void div(){
+        int a=88,b=12;
+        System.out.println("div="+(a/b));
+    }
+    void mod(){
+        int a=92,b=6;
+        System.out.println("mod="+(a%b));
+    }
+}
+//main.java
+public class Main {
+    public static void main(String[] args) {
+        new A().Add();
+        new A().sub();
+        new A().mul();
+        new A().div();
+        new A().mod();
+    }
+}
+
+
+(B)-> user input
+//A.java
+import java.util.*;
+class A {
+    void Add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("add="+(a+b));
+    }
+    void sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("sub="+(a-b));
+    }
+    void mul(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("mul="+(a*b));
+    }
+    void div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("div="+(a/b));
+    }
+    void mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("mod="+(a%b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        new A().Add();
+        new A().sub();
+        new A().mul();
+        new A().div();
+        new A().mod();
+    }
+}
+
+(2)->
+[B]-> use input
+//A.java
+import com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+import java.util.*;
+class A {
+    void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("add="+(a+b));
+    }
+    void sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("sub="+(a-b));
+    }
+    void mul(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("mul="+(a*b));
+    }
+    void div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("div="+(a/b));
+    }
+    void mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("mod="+(a%b));
+    }
+}
+class B{
+    A op = new A();
+    void c(){
+        op.add();
+        op.sub();
+        op.mul();
+        op.div();
+        op.mod();
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+
+[A]->
+//A.java
+class A {
+void add(){
+    int a=76,b=32;
+    int c=a+b;
+    System.out.println("add ="+c);
+}
+    void sub(){
+        int a=67,b=23;
+        System.out.println("sub="+(a-b));
+    }
+    void mul(){
+        int a=12,b=8;
+        System.out.println("mul="+(a*b));
+    }
+    void div(){
+        int a=88,b=12;
+        System.out.println("div="+(a/b));
+    }
+    void mod(){
+        int a=92,b=6;
+        System.out.println("mod="+(a%b));
+    }
+}
+class B{
+    A op = new A();
+    void c(){
+        op.add();
+        op.sub();
+        op.mul();
+        op.div();
+        op.mod();
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+(3)->
+[A]->
+// A.java
+class A {
+    void Add(int a,int b){
+        System.out.println("add="+(a+b));
+    }
+    void sub(int a,int b){
+        System.out.println("sub="+(a-b));
+    }
+    void mul(int a,int b){
+        System.out.println("mul="+(a*b));
+    }
+    void div(int a,int b){
+        System.out.println("div="+(a/b));
+    }
+    void mod(int a,int b){
+        System.out.println("mod="+(a%b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        new A().Add(86,14);
+        new A().sub(88,38);
+        new A().mul(88,6);
+        new A().div(88,4);
+        new A().mod(88,5);
+    }
+}
+
+[B]->
+// A.java
+import java.util.*;
+class A {
+    void Add(int a,int b){
+        System.out.println("add="+(a+b));
+    }
+    void sub(int a,int b){
+        System.out.println("sub="+(a-b));
+    }
+    void mul(int a,int b){
+        System.out.println("mul="+(a*b));
+    }
+    void div(int a,int b){
+        System.out.println("div="+(a/b));
+    }
+    void mod(int a,int b){
+        System.out.println("mod="+(a%b));
+    }
+}
+// main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        new A().Add(a,b);
+        new A().sub(a,b);
+        new A().mul(a,b);
+        new A().div(a,b);
+        new A().mod(a,b);
+    }
+
+(4)->
+[A]->
+import com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+class A {
+    void add(int a,int b){
+        System.out.println("add="+(a+b));
+    }
+    void sub(int a,int b){
+        System.out.println("sub="+(a-b));
+    }
+    void mul(int a,int b){
+        System.out.println("mul="+(a*b));
+    }
+    void div(int a,int b){
+        System.out.println("div="+(a/b));
+    }
+    void mod(int a,int b){
+        System.out.println("mod="+(a%b));
+    }
+}
+class B{
+    A op = new A();
+    void c(){
+        op.add(7,3);
+        op.sub(90,3);
+        op.mul(7,3);
+        op.div(9,3);
+        op.mod(9,5);
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+
+[B]->
+// A.java
+cimport com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+import java.util.Scanner;
+class A {
+    void add(int a,int b){
+        System.out.println("add="+(a+b));
+    }
+    void sub(int a,int b){
+        System.out.println("sub="+(a-b));
+    }
+    void mul(int a,int b){
+        System.out.println("mul="+(a*b));
+    }
+    void div(int a,int b){
+        System.out.println("div="+(a/b));
+    }
+    void mod(int a,int b){
+        System.out.println("mod="+(a%b));
+    }
+}
+class B{
+    A op = new A();
+    void c(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a = sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        op.add(a,b);
+        op.sub(a,b);
+        op.mul(a,b);
+        op.div(a,b);
+        op.mod(a,b);
+    }
+}
+// main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+
+(5)->
+[A]->
+// A.java
+class A {
+    int Add(){
+        int a=32,b=19;
+        int c=a+b;
+        return c;
+    }
+    int sub(){
+        int a=67,b=23;
+       int c=a-b;
+       return c;
+    }
+    int mul(){
+        int a=12,b=8;
+       int c=a*b;
+       return c;
+    }
+    int div(){
+        int a=88,b=12;
+        int c=a/b;
+        return c;
+    }
+    int mod(){
+        int a=92,b=6;
+        int c=a%b;
+        return c;
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k =new A();
+        System.out.println("add="+k.Add());
+        System.out.println("sub="+k.sub());
+        System.out.println("mul="+k.mul());
+        System.out.println("div ="+k.div());
+        System.out.println("mod="+k.mod());
+        }
+}
+
+[B]->
+// A.java
+import java.util.*;
+class A {
+    int Add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a+b;
+        return c;
+    }
+    int sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+       int c=a-b;
+       return c;
+    }
+    int mul(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+       int c=a*b;
+       return c;
+    }
+    int div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a/b;
+        return c;
+    }
+    int mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a%b;
+        return c;
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k =new A();
+        System.out.println("add="+k.Add());
+        System.out.println("sub="+k.sub());
+        System.out.println("mul="+k.mul());
+        System.out.println("div ="+k.div());
+        System.out.println("mod="+k.mod());
+        }
+}
+(6)->
+[B]->
+// A.java
+import com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+import java.util.*;
+class A {
+    int add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a+b;
+        return c;
+    }
+    int sub(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a-b;
+        return c;
+    }
+    int mul(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a*b;
+        return c;
+    }
+    int div(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a/b;
+        return c;
+    }
+    int mod(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        int c=a%b;
+        return c;
+    }
+}
+class B {
+    A op = new A();
+    void c(){
+        System.out.println("add ="+op.add());
+        System.out.println("sub ="+op.sub());
+        System.out.println("mul="+op.mul());
+        System.out.println("add ="+op.div());
+        System.out.println("sub ="+op.mod());
+    }
+}
+// main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+
+[A]->
+import com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+class A {
+    int add(){
+        int a=9,b=9;
+        int c=a+b;
+        return c;
+    }
+    int sub(){
+        int a=9,b=9;
+        int c=a-b;
+        return c;
+    }
+    int mul(){
+        int a=9,b=9;
+        int c=a*b;
+        return c;
+    }
+    int div(){
+       int a=99,b=9;
+        int c=a/b;
+        return c;
+    }
+    int mod(){
+        int a=99,b=8;
+        int c=a%b;
+        return c;
+    }
+}
+class B {
+    A op = new A();
+    void c(){
+        System.out.println("add ="+op.add());
+        System.out.println("sub ="+op.sub());
+        System.out.println("mul="+op.mul());
+        System.out.println("add ="+op.div());
+        System.out.println("sub ="+op.mod());
+    }
+}
+//main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
+(7)->
+[A]->constant
+//A.java
+class A {
+    int add(int a, int b)
+    {
+        int c = a + b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        return c;
+    }
+    int div(int a, int b){
+        int c=a/b;
+        return c;
+    }
+    int mod(int a, int b){
+        int c=a%b;
+        return c;
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+       int m  = k.add(6,3);
+        System.out.println("add ="+m);
+        int n = k.sub(6,3);
+        System.out.println("sub="+n);
+        int o = k.mul(6,3);
+        System.out.println("mul="+o);
+        int p = k.div(6,3);
+        System.out.println("div="+p);
+        int q = k.mod(6,4);
+        System.out.println("mod="+q);
+    }
+}
+
+[B]->user i/p
+//A.java
+import java.util.Scanner;
+class A {
+    int add(int a, int b)
+    {
+        int c = a + b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        return c;
+    }
+    int div(int a, int b){
+        int c=a/b;
+        return c;
+    }
+    int mod(int a, int b){
+        int c=a%b;
+        return c;
+    }
+}
+import java.util.Scanner;
+
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b= ");
+        int b = sc.nextInt();
+       int m  = k.add(a,b);
+        System.out.println("add ="+m);
+        int n = k.sub(a,b);
+        System.out.println("sub="+n);
+        int o = k.mul(a,b);
+        System.out.println("mul="+o);
+        int p = k.div(a,b);
+        System.out.println("div="+p);
+        int q = k.mod(a,b);
+        System.out.println("mod="+q);
+    }
+}
+
+(8)->
+[B]->user
+//A.java
+import com.sun.corba.se.spi.orb.Operation;
+import java.util.Optional;
+import java.util.Scanner;
+class A {
+    int add(int a, int b)
+    {
+        int c = a + b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        return c;
+    }
+    int div(int a, int b){
+        int c=a/b;
+        return c;
+    }
+    int mod(int a, int b){
+        int c=a%b;
+        return c;
+    }
+}
+class B {
+    A op = new A();
+    void c(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b= ");
+        int b = sc.nextInt();
+        int m  = op.add(a,b);
+        System.out.println("add ="+m);
+        int n = op.sub(a,b);
+        System.out.println("sub="+n);
+        int o = op.mul(a,b);
+        System.out.println("mul="+o);
+        int p = op.div(a,b);
+        System.out.println("div="+p);
+        int q = op.mod(a,b);
+        System.out.println("mod="+q);
+    }
+}
+// main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        k.c();
+    }
+}
