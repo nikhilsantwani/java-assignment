@@ -1,3 +1,5 @@
 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
 
 git remote set-url origin https://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@github.com/nikhil/26-oct
+
+git remote set-url origin https://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@github.com/nikhilsantwani/java-assignment

@@ -1,0 +1,203 @@
+1)
+Create a Java program that simulates a game of Rock, Paper, Scissors between two
+players. Take the choices as input and determine the winner using "if-else if"
+statements. If it's a tie, print "Tie.
+
+2)
+Create a Java program to determine whether a year is a leap year, but with additional
+conditions: if it's divisible by 4, it's a leap year, unless it's divisible by 100, except
+when it's also divisible by 400.
+
+3.Write a Java program that accepts a number as input and determines if it's positive,
+negative, or zero.
+4.Implement a program that takes a string as input and checks if it's a valid email
+address according to a specific format.
+5.Write a Java program to simulate a basic calculator that can perform addition,
+subtraction, multiplication, and division operations.
+6.Create a program that reads a year and a month as input and prints the number of
+days in that month, considering leap years for February.
+
+7.Write a Java program that checks if a given number is a perfect square and, if it is,
+finds its square root.
+8.Implement a program that calculates the age of a person based on their birthdate
+and the current date.
+
+9.Write a Java program to check if a given number is a strong number or not, where
+a strong number is the sum of its individual digits' factorial.
+
+10.Design a Java program to calculate the income tax for an individual based on their
+annual income. The program should apply different tax rates to different income
+ranges as defined by the tax laws. The tax rates should be applied progressively,
+with higher income levels incurring a higher tax rate. The program should prompt the
+user to input their income, and then it should determine the tax owed based on the
+following income ranges and associated tax rates:
+Income up to $50,000: 10% tax
+Income from $50,001 to $100,000: 20% tax
+Income over $100,000: 30% tax
+
+11.Create a program that uses a for loop to find and print all the prime numbers
+between 1 and 100.
+
+12.Create a program that calculates and prints the sum of the squares of all even
+numbers between 1 and 100 using a for loop
+
+13.Create a Java program that calculates and prints the sum of the first 100 prime
+numbers using a for loop.
+
+14.Implement a Java program to print the Pascal's triangle for a given number of
+rows using for loops.
+
+15.Create a program to find and print the Armstrong numbers between 1 and 1000
+using a for loop.
+
+16
+Create an abstract class GeometricShape with abstract methods calculateArea() and
+calculateVolume(). Create a subclass Cube that extends GeometricShape and
+provides implementations for both methods.
+
+17 Write a Java program to find the second smallest element in an array without
+sorting it.
+
+18 Implement a method to rotate an array to the right by K steps.
+
+19 Given two sorted arrays, merge them into a single sorted array without using extra
+space.
+
+20Create a method to remove duplicates from an unsorted array without using extra
+space.
+
+21 Write a Java program to find the "intersection" of two arrays (elements present in
+both arrays).
+
+22 Given an array of integers, rearrange the array so that the even-indexed elements
+are greater than the odd-indexed elements.
+
+23 Write a Java program to find the saddle point of a matrix. A saddle point is an
+element that is the minimum in its row and the maximum in its column.
+
+24 Create a Java program to rotate a given matrix 90 degrees clockwise in place,
+without using an extra matrix.
+
+25 Write a Java program to perform matrix multiplication for two given matrices.
+
+26 Create a Java program to calculate the sum of all the elements in a given 2D
+array in a spiral order.
+
+27 Create a class called Employee with properties like id, name, and a method
+displayDetails(). Derive two classes, Manager and Clerk, from the Employee class.
+Implement the displayDetails() method differently in each derived class.
+
+28 Implement a class hierarchy that models geometric shapes, with a base class
+Shape and derived classes like Circle, Rectangle, and Triangle. Include methods to
+calculate the area and perimeter for each shape.
+
+29 Design a class hierarchy for a library system with classes like Item (base class),
+Book, and DVD (derived classes). Include methods for checking out and returning
+items.
+
+30 Create an abstract class Shape with an abstract method calculateArea(). Create
+two subclasses, Circle and Rectangle, that extend the Shape class and provide
+implementations for the calculateArea() method.
+
+31 Create an abstract class Animal with an abstract method makeSound(). Create
+three subclasses, Dog, Cat, and Horse, that extend the Animal class and implement
+the makeSound() method.
+
+32 Create a base class Shape with a method calculateArea(). Derive two classes
+Circle and Rectangle from Shape. Implement the area calculation logic for each
+class. Write a program that calculates the total area of multiple shapes.
+
+33
+ArrayList Operations:
+Create an empty ArrayList of integers.
+Add the numbers 1 to 10 to the ArrayList.
+
+Remove an element at a specific index from the ArrayList.
+Check if the ArrayList is empty.
+Create a new ArrayList and add all elements from the first ArrayList to it.
+Replace an element at a specific index with a new value.
+
+Remove all occurrences of a specific value from the ArrayList.
+Get the size of the ArrayList.
+
+34
+ArrayList :
+Iterate through the ArrayList and print all elements.
+Find and print the sum of all elements in the ArrayList.
+Find and print the maximum value in the ArrayList.
+Find and print the minimum value in the ArrayList.
+Create a new ArrayList that contains only the even numbers from the original
+ArrayList.
+Create a sub-ArrayList from index 2 to 7 and print its contents.
+
+35 Linkedlist:
+Create an empty LinkedList of integers.
+Add the numbers 1 to 10 to the LinkedList.
+Remove an element at a specific index from the LinkedList.
+Retrieve and print an element at a specific index.
+Check if the LinkedList is empty.
+36
+Create a new LinkedList and add all elements from the first LinkedList to it.
+Replace an element at a specific index with a new value.
+Check if a specific element exists in the LinkedList.
+Remove all occurrences of a specific value from the LinkedList.
+Get the size of the LinkedList.
+
+37
+Iterate through the LinkedList and print all elements.
+Find and print the sum of all elements in the LinkedList.
+Find and print the maximum value in the LinkedList.
+Find and print the minimum value in the LinkedList.
+Create a new LinkedList that contains only the even numbers from the original
+LinkedList.
+
+38
+Design a class structure for an online shopping system using aggregation.
+
+39
+Write a Java program that generates an ArithmeticException and handles it using a
+try-catch block.
+
+40
+Implement a Java program to catch and handle a NullPointerException exception.
+
+41
+Create a Java program that throws an ArrayIndexOutOfBoundsException and
+handles it gracefully.
+
+42
+Write a program to demonstrate the use of multiple catch blocks for different
+exceptions.
+
+43
+Develop a Java program that uses the finally block to ensure a piece of code is
+executed regardless of whether an exception occurs or not.
+
+44
+Implement a Java program that reads an integer from the user and handles the
+InputMismatchException using a try-catch block.
+
+45
+Write a Java program that simulates a file I/O operation and handles a
+FileNotFoundException.
+
+46
+Create a program to show the use of the throws keyword in method declaration and
+propagation of exceptions.
+
+47
+
+Create a program that reads a file and calculates the average of numbers in it.
+Handle NumberFormatException if a non-numeric value is encountered.
+
+48
+Implement a program that calculates the division of two numbers, but if the
+denominator is zero, it throws a custom exception "DivisionByZeroException."
+
+49
+Develop a program that reads a string from the user and converts it to an integer.
+Handle the NumberFormatException if the input is not a valid integer.
+
+50
+Write a program to read a list of numbers and find the maximum. Handle any
+potential NumberFormatException and InputMismatchException.
