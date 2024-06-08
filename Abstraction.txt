@@ -1,0 +1,167 @@
+1)
+Write a Java program that checks if a given number is a perfect square and, if it is, finds its square root.
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no. = ");
+        int num = sc.nextInt();
+        boolean Perfect =false;
+        int temp=num;
+        for (int i=1;i< num/2;i++){
+            int n = i*i;
+
+            if (n==num){
+                Perfect = true;
+                temp=i;
+            }
+        }
+        if (Perfect){
+            System.out.println(num+" is Perfect Square");
+            System.out.println(temp+ " is square root");
+        }
+        else {
+            System.out.println("Not a Perfect Square ");
+        }
+    }
+}
+
+
+2)
+Create a Java program that calculates and prints the sum of the first 100 prime numbers using a for loop.
+
+public class Main {
+    public static void main(String[] args) {
+        int sum=0;
+        for (int n = 0; n <= 100; n++) {
+            if (isPrime(n)) {
+                sum+=n;
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static boolean isPrime(int n) {
+
+        if (n <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+3)
+Implement an interface called Drawable with a draw() method, and create classes like Circle, Rectangle, and Triangle that implement this interface to draw themselves.
+interface Drawable{
+    public static void Draw() {}
+}
+class Circle implements Drawable {
+
+    public static void Draw() {
+        System.out.println("Circle");
+    }
+}
+class Rectangle implements Drawable {
+
+        public static void Draw() {
+        System.out.println("Rectangle");
+    }
+}
+class Triangle implements Drawable {
+    public static void Draw() {
+        System.out.println("Triangle");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+         Circle.Draw();
+         Rectangle.Draw();
+         Triangle.Draw();
+    }
+}
+
+
+4)
+Implement a complex class hierarchy for a university system with classes for students, professors, courses, and enrollments, and demonstrate various operations like course registration and grade calculation.
+
+
+5)
+Create an abstract class Employee with data members name, employeeID, and a non-abstract method displayDetails(). Create a subclass Manager that extends Employee and provides an implementation for displayDetails().
+
+
+abstract class Employee {
+    protected String name;
+    protected String employeeID;
+
+    public Employee(String name, String employeeID) {
+        this.name = name;
+        this.employeeID = employeeID;
+    }
+
+    public void displayDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Employee ID: " + employeeID);
+    }
+}
+
+class Manager extends Employee {
+    private String department;
+
+
+    public Manager(String name, String employeeID, String department) {
+        super(name, employeeID);
+        this.department = department;
+    }
+
+    public void displayDetails() {
+        super.displayDetails();
+        System.out.println("Department: " + department);
+    }
+
+    public static void main(String[] args) {
+        Manager manager = new Manager("aaa","123","java");
+        Manager manager1 = new Manager("bbb","312","java");
+        manager.displayDetails();
+        manager1.displayDetails();
+    }
+}
+
+
+
+6)
+    1 
+   1 1 
+  1 2 1 
+ 1 3 3 1 
+
+
+public class Main{
+    public static void main(String[] args) {
+        int row=3;
+        int m=1;
+        for (int i=0;i<=row;i++){
+            for (int j=i;j<row;j++){
+                System.out.print(" ");
+            }
+            for (int k=1;k<=(2*i+1);k++){
+                if (k==1 || k==(2*i+1)){
+                        System.out.print(m);
+                }
+                else if (k%2 != 0 && k!=1){
+                    System.out.print(i);
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
