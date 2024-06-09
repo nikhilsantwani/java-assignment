@@ -1,0 +1,257 @@
+1)two number addition 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Add Two Numbers</h2>
+    <form action="salary" method="post">
+        Number 1: <input type="text" name="num1"><br>
+        Number 2: <input type="text" name="num2"><br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
+
+package salary;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class salary
+ */
+@WebServlet("/salary")
+public class salary extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public salary() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	
+	        response.getWriter().append(" Please use the POST method to add two numbers.");
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	
+	        int num1 = Integer.parseInt(request.getParameter("num1"));
+	        int num2 = Integer.parseInt(request.getParameter("num2"));
+	        int sum = num1 + num2;
+	        response.getWriter().append("Sum of " + num1 + " and " + num2 + " is: " + sum);
+	    
+		doGet(request, response);
+	}
+
+}
+
+
+2)voter id 
+name
+fname
+address
+age 
+type :addhar card (print)
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>Enter Voter ID Details</h1>
+    <form action="salary" method="post">
+        <label for="voterID">Voter ID:</label><br>
+        <input type="text" id="voterID" name="voterID"><br><br>
+        
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="fatherName">Father's Name:</label><br>
+        <input type="text" id="fatherName" name="fatherName"><br><br>
+        
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address"></textarea><br><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+package salary;
+import java.io.PrintWriter;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class salary
+ */
+@WebServlet("/salary")
+public class salary extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public salary() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	
+	        response.getWriter().append(" Please use the POST method to add two numbers.");
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        
+        String voterID = request.getParameter("voterID");
+        String name = request.getParameter("name");
+        String fatherName = request.getParameter("fatherName");
+        String address = request.getParameter("address");
+        String age = request.getParameter("age");
+        
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Voter ID</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Voter ID</h1>");
+        out.println("<p>Voter ID: " + voterID + "</p>");
+        out.println("<p>Name: " + name + "</p>");
+        out.println("<p>Father's Name: " + fatherName + "</p>");
+        out.println("<p>Address: " + address + "</p>");
+        out.println("<p>Age: " + age + "</p>");
+        out.println("<p>Type: Aadhar Card (Print)</p>");
+        out.println("</body>");
+        out.println("</html>");
+	}
+
+}
+
+
+3)salary if else 
+salalry :
+holidays (1) =full salary 
+2-5 =5% 
+5-14 =10% 
+15 =50% 
+else =not salary 
+
+output : 
+empid :
+name:
+company name:
+address: 
+bank details: 
+salary : 
+alot :
+ holidays 
+
+
+4)electricity 
+electric city bill : 
+4 unit 
+40 
+1- 10 = 10% 
+11-20 =15% 
+21-40 =30% 
+50 =50% 
+
+output : 
+name:
+fname:
+address :
+home_number :
+unit :3 
+amout 30 
+discout : 10% 
+total pay amount : 
+
+5)marksheet 
+Write a java program to read the roll no, name,fnname and marks of three subjects and calculate the total, percentage and division.
+Test Data :
+Input the Roll Number of the student :784
+student name : 
+fname:
+mname:
+address:
+contact:
+school name :
+class : 
+fees : 
+Input the marks of Physics, Chemistry and Computer Application : 70 80 90
+total: 
+precentage : % 
+division:
+
+6)
+retailer 
+customer 
+retailer : 
+1-15 peices =15% 
+16-30 =30% 
+31-50 =50% 
+
+output : 
+reailer name :asish kumar 
+peicies : 30 
+discount : 
+
+customer  : 
+1000 to 2000 -10% 
+100-1000 -5% 
+2000--3000 =15% 
+3000< 30% 
+sout("---------------------");
+output : 
+customer name : 
+contact number : 
+payment : 
+discout : 
+total payment 
+
+7)user input :number 
+table print 
