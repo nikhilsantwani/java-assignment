@@ -1,0 +1,229 @@
+// how to make a tree
+
+import java.util.*;
+class Node{
+    Node left,right;
+    int data;
+
+    public Node(int data){
+        this.data = data;
+    }
+}
+public class Main {
+    static Scanner sc = new Scanner(System.in);
+
+    //make a method covarient return type : return this
+    static Node createTree(){
+        Node root = null;
+        System.out.println("enter the data");
+        int data = sc.nextInt();
+        if (data ==-1){
+            return null;
+        }
+        root = new Node(data);
+        System.out.println("enter data left "+data);
+        root.left = createTree();
+        System.out.println("enter the right data "+data);
+        root.right = createTree();
+        return root;
+    }
+    public static void main(String[] args) {
+        createTree();
+    }
+}
+-----------------------------------------------------------------
+traversal in tree :
+preorder traversal :first order :root left right 
+inorder traversal : second order : left root right
+postorder traversal : third order : left right ?
+
+//preorder : 24,72,5,3,2,6,7
+//inorder : 5,72,24
+//postorder : 5
+
+
+----------------------------------------------------------
+height of tree
+
+
+-----------------------------------------------------------------
+what is singelton class?
+->
+In Java, a Singleton class is a design pattern that restricts the instantiation of a class to one single instance. 
+This is useful when you want to ensure that only one instance of a class is created and provide a global point of access to that instance.
+
+To make any class singleton, we need to consider or implement following-
+
+Private or protected constructor- We need to make the constructor of a class private so that no one from outer world can call a “new”.
+Create a private static instance of the class.
+Create a public static method which will return the instance created.
+
+what is singelton design method ?
+
+The singleton design pattern is a creational pattern that ensures a class has only one instance and provides a global point of access to that instance. 
+This helps to maintain consistency, reduce complexity and ensure better use of resources.
+For example, in a database-driven application, the singleton design pattern can create a database connection manager that ensures only one connection to the database, rather than multiple connections.
+ This helps to control the number of instances of a class and ensures that only one instance exists throughout the lifetime of an application. 
+This improves the application's performance and stability.
+
+what is singelton class method ?
+
+why we used getter and setter method in java
+
+ what is difference b/w runnable interface and thread class ?
+When we extend Thread class, we can’t extend any other class even we require and When we implement Runnable, we can save a space for our class to extend any other class in future or now.
+When we extend Thread class, each of our thread creates unique object and associate with it. When we implements Runnable, it shares the same object to multiple threads.
+
+
+-----------------------------------
+q-1)what is multithreading ?
+
+Multithreading in Java is a process of executing multiple threads simultaneously.
+A thread is a lightweight sub-process, the smallest unit of processing.
+ Multiprocessing and multithreading, both are used to achieve multitasking.
+
+Advantages of Java Multithreading
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+q-2) what is diff b/w runnable and thread ?
+
+
+
+q-3) why we used abstraction in java?
+
+Abstraction in Java, as well as in other programming languages, serves several purposes:
+Encapsulation in complexity :- Abstraction allows developer to hide complex impelementation detail and show only necessary features of object.
+this simplifies usage of object and reduce complexity.
+
+focus on relevant information :- focus on relevant information and hidding irrelevant operation.
+ This allows developers to concentrate on what an object does rather than how it does it, which enhances code readability and maintainability.
+
+Code Reusability:abstract classes and interface can extend and implemented by multiple classes,promoting modular and reusable code.
+
+Separation of Concerns: Abstraction allows for a clear separation of concerns in a program. 
+It helps in dividing the overall functionality into smaller, more manageable units, each responsible for a specific aspect of the program's behavior.
+
+Flexibility and Extensibility: Abstraction provides flexibility in the design of software systems. 
+It allows developers to define contracts (interfaces) that can be implemented by multiple classes, facilitating extensibility and adaptability to changing requirements.
+
+q-4)
+
+q-5) diff b/w is-a-relationship and has-a-relationship
+
+Is-A Relationship in Java
+In Java, an Is-A relationship depends on inheritance. Further inheritance is of two types, class inheritance and interface inheritance. It is used for code reusability in Java.
+One of the properties of inheritance is that inheritance is unidirectional in nature. Like we can say that a house is a building. But not all buildings are houses.
+ We can easily determine an Is-A relationship in Java.
+ When there is an extends or implement keyword in the class declaration in Java, then the specific class is said to be following the Is-A relationship.
+
+Has-A Relationship in Java
+In Java, a Has-A relationship is also known as composition. It is also used for code reusability in Java. In Java, a Has-A relationship simply means that an instance of one class has a reference to an instance of another class or another instance of the same class.
+For example, a car has an engine, a dog has a tail and so on. In Java, there is no such keyword that implements a Has-A relationship. But we mostly use new keywords to implement a Has-A relationship in Java.
+
+
+-----------------------------------------------------------------
+import java.util.*;
+
+class Node{
+    Node left,right;
+    int data;
+
+    public Node(int data){
+        this.data=data;
+    }
+}
+public class Main {
+    static Scanner sc;
+
+    static Node createTree(){
+        Node root = null;
+        System.out.println("enter data");
+        int data = sc.nextInt();
+        if (data ==-1){
+            return null;
+        }
+        root = new Node(data);
+        System.out.println("enter left data = "+data);
+        root.left = createTree();
+
+        System.out.println("enter right data = "+data);
+        root.right = createTree();
+        return root;
+    }
+    static int maximum(Node root){
+        if (root == null){
+            return 0;
+        }
+        return Math.max(root.data,Math.max(maximum(root.left),maximum(root.right)));
+    }
+
+    public static void main(String[] args) {
+        sc = new Scanner(System.in);
+        Node root = createTree();
+        int result = maximum(root);
+        System.out.println(result);
+    }
+}
+-----------------------------------------------
+BFS :- breadth first search 
+tree traversals
+level : first level
+second level
+
+import java.util.*;
+class Node{
+    Node left,right;
+    int data;
+    public Node(int data){
+        this.data=data;
+    }
+}
+public class Main {
+    static Scanner sc;
+    static Node createTree(){
+        Node root = null;
+        System.out.println("enter data");
+        int data = sc.nextInt();
+        if (data == -1){
+            return null;
+        }
+        root = new Node(data);
+        System.out.println("enter left data"+data);
+        root.left = createTree();
+        System.out.println("enter right data = "+data);
+        root.right = createTree();
+        return root;
+    }
+    void printLevel(Node root,int level){
+        if (root==null){
+            return;
+        }
+        if (level==1){
+            System.out.println(root.data+" ");
+        } else if (level>1) {
+            printLevel(root.left,level-1);
+            printLevel(root.right,level-1);
+        }
+    }
+
+    public static void main(String[] args) {
+        sc = new Scanner(System.in);
+        Main tree = new Main();
+        Node root = createTree();
+
+        System.out.println("enter the level");
+        int level = sc.nextInt();
+        System.out.println("node at level "+level);
+        tree.printLevel(root,level);
+    }
+}
+--------------------------------------------------------------------
+3/4/24                       java
+
+
+
+
