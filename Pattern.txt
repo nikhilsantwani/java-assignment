@@ -1,0 +1,296 @@
+1. Right Triangle Star Pattern
+
+public class RightTrianglePattern   
+{   
+public static void main(String args[])   
+{   
+//i for rows and j for columns      
+//row denotes the number of rows you want to print  
+int i, j, row=6;   
+//outer loop for rows  
+for(i=0; i<row; i++)   
+{   
+//inner loop for columns  
+for(j=0; j<=i; j++)   
+{   
+//prints stars   
+System.out.print("* ");   
+}   
+//throws the cursor in a new line after printing each line  
+System.out.println();   
+}   
+}   
+}  
+Output:
+
+
+2. Left Triangle Star Pattern
+
+public class LeftTrianglePattern  
+{    
+public static void main(String args[])   
+{    
+//i for rows and j for columns      
+//row denotes the number of rows you want to print  
+int i, j, row = 6;       
+//Outer loop work for rows  
+for (i=0; i<row; i++)   
+{  
+//inner loop work for space      
+for (j=2*(row-i); j>=0; j--)         
+{  
+//prints space between two stars      
+System.out.print(" ");   
+}   
+//inner loop for columns  
+for (j=0; j<=i; j++ )   
+{   
+//prints star      
+System.out.print("* ");   
+}   
+//throws the cursor in a new line after printing each line  
+System.out.println();   
+}   
+}   
+}  
+Output:
+
+3. Pyramid Star Pattern
+
+public class PyramidPattern  
+{    
+public static void main(String args[])   
+{    
+//i for rows and j for columns      
+//row denotes the number of rows you want to print  
+int i, j, row = 6;       
+//Outer loop work for rows  
+for (i=0; i<row; i++)   
+{  
+//inner loop work for space      
+for (j=row-i; j>1; j--)   
+{  
+//prints space between two stars  
+System.out.print(" ");   
+}   
+//inner loop for columns  
+for (j=0; j<=i; j++ )   
+{   
+//prints star      
+System.out.print("* ");   
+}   
+//throws the cursor in a new line after printing each line  
+System.out.println();   
+}   
+}   
+}  
+Output:
+
+4. Diamond Shape Pattern
+
+import java.util.Scanner;  
+public class DiamondPattern  
+{  
+public static void main(String args[])  
+{  
+int row, i, j, space = 1;  
+System.out.print("Enter the number of rows you want to print: ");  
+Scanner sc = new Scanner(System.in);  
+row = sc.nextInt();  
+space = row - 1;  
+for (j = 1; j<= row; j++)  
+{  
+for (i = 1; i<= space; i++)  
+{  
+System.out.print(" ");  
+}  
+space--;  
+for (i = 1; i <= 2 * j - 1; i++)  
+{  
+System.out.print("*");  
+}  
+System.out.println("");  
+}  
+space = 1;  
+for (j = 1; j<= row - 1; j++)  
+{  
+for (i = 1; i<= space; i++)  
+{  
+System.out.print(" ");  
+}  
+space++;  
+for (i = 1; i<= 2 * (row - j) - 1; i++)  
+{  
+System.out.print("*");  
+}  
+System.out.println("");  
+}  
+}  
+}  
+Output:
+
+5. Downward Triangle Star Pattern
+
+public class DownwardTrianglePattern  
+{  
+public static void main(String[] args)  
+{  
+int rows=7;      
+//inner loop  
+for (int i= rows-1; i>=0 ; i--)  
+{  
+//outer loop  
+for (int j=0; j<=i; j++)  
+{  
+//prints star and space  
+System.out.print("*" + " ");  
+}  
+//throws the cursor in the next line after printing each line  
+System.out.println();  
+}  
+}  
+}  
+Output:
+
+6. Mirrored Right Triangle Star Pattern
+
+public class MirroredRightTrianglePattern   
+{  
+public static void main(String[] args)  
+{  
+int n=7;  
+//inner loop  
+for (int i= 0; i<= n; i++)  
+{  
+//outer loop  
+for (int j=1; j<=n-i; j++)  
+{  
+System.out.print(" ");  
+}  
+for (int k=0;k<=i;k++)  
+{  
+System.out.print("*");  
+}   
+System.out.println("");  
+}  
+}  
+}  
+Output:
+
+7. Reverse Pyramid Star Pattern
+
+public class ReversePyramidPattern  
+{  
+public static void main(String[] args)  
+{  
+int rows=8;  
+for (int i= 0; i<= rows-1; i++)  
+{  
+for (int j=0; j<=i; j++)  
+{  
+System.out.print(" ");  
+}  
+for (int k=0; k<=rows-1-i; k++)  
+{  
+System.out.print("*" + " ");  
+}  
+System.out.println();  
+}  
+}  
+}  
+Output:
+
+8. Right Down Mirror Star Pattern
+
+public class RightDownMirrorPattern  
+{  
+public static void main(String args[])  
+{  
+int row=7;  
+for (int i= row; i>= 1; i--)  
+{  
+for (int j=row; j>i;j--)  
+{  
+System.out.print(" ");  
+}  
+for (int k=1;k<=i;k++)  
+{  
+System.out.print("*");  
+}  
+System.out.println("");  
+}  
+}  
+}  
+Output:
+
+9. Right Pascal's Triangle
+
+import java.util.Scanner;  
+public class RightPascalTrianglePattern  
+{  
+public static void main(String[] args)  
+{  
+int i, j, rows;  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter the number of rows you want to print: ");  
+rows = sc.nextInt();          
+for (i= 0; i<= rows-1; i++)  
+{  
+for (j=0; j<=i; j++)   
+{  
+System.out.print("*"+ " ");  
+}   
+System.out.println("");   
+}   
+for (i=rows-1; i>=0; i--)  
+{  
+for(j=0; j <= i-1;j++)  
+{  
+System.out.print("*"+ " ");  
+}  
+System.out.println("");  
+}  
+}  
+}  
+Output:
+
+10. Left Pascal's Triangle
+
+import java.util.Scanner;  
+public class LeftPascalTrianglePattern  
+{  
+public static void main(String[] args)  
+{  
+int i, j, k, rows;  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter the number of rows you want to print: ");  
+rows = sc.nextInt();          
+for (i= 1; i<= rows ; i++)  
+{  
+for (j=i; j <rows ;j++)              
+{  
+System.out.print(" ");  
+}  
+for (k=1; k<=i;k++)   
+{  
+System.out.print("*");   
+}   
+System.out.println("");   
+}   
+for (i=rows; i>=1; i--)  
+{  
+for(j=i; j<=rows;j++)  
+{  
+System.out.print(" ");  
+}  
+for(k=1; k<i ;k++)   
+{  
+System.out.print("*");  
+}  
+System.out.println("");  
+}  
+sc.close();  
+}  
+}  
+Output:
+
