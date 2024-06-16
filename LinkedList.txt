@@ -1,0 +1,1986 @@
+q-1) insert values in linkedlist
+
+->public class LL {
+    private Node head;
+    private Node tail;
+    private int size;
+
+    public LL() {
+        this.size = size;
+    }
+    public void insertFirst(int val){
+        Node node = new Node(val);
+        node.next = head;
+        head =node;
+
+        if (tail == null){
+            tail=head;
+        }
+        size+=1;
+    }
+  
+    public void display(){
+        Node temp= head;
+        while (temp!=null){
+            System.out.print(temp.value+" -> ");
+            temp=temp.next;
+        }
+        System.out.println("END");
+    }
+    private class Node{
+        private int value;
+        private Node next;
+        public Node(int value){
+            this.value = value;
+        }
+
+        public Node(int value,Node next) {
+            this.value = value;
+            this.next = next;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(8);
+        list.insertFirst(17);
+        list.display();
+    }
+}
+
+q-2)inset element at last
+
+public class LL {
+    private Node head;
+    private Node tail;
+    private int size;
+
+    public LL() {
+        this.size = size;
+    }
+    public void insertFirst(int val){
+        Node node = new Node(val);
+        node.next = head;
+        head =node;
+
+        if (tail == null){
+            tail=head;
+        }
+        size+=1;
+    }
+    public void insertLast(int val){
+        if(tail == null){
+            insertFirst(val);
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+    public void display(){
+        Node temp= head;
+        while (temp!=null){
+            System.out.print(temp.value+" -> ");
+            temp=temp.next;
+        }
+        System.out.println("END");
+    }
+    private class Node{
+        private int value;
+        private Node next;
+        public Node(int value){
+            this.value = value;
+        }
+
+        public Node(int value,Node next) {
+            this.value = value;
+            this.next = next;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        LL list = new LL();
+        list.insertFirst(3);
+        list.insertFirst(2);
+        list.insertFirst(8);
+        list.insertFirst(17);
+        list.insertLast(99);
+        list.display();
+    }
+}
+
+--------------------------------------------------------------------------
+college wallah 
+1) print a linkedlist
+public class Main {
+    public  static void display(Node head){
+        Node temp=head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+             this.data=data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(9);
+        Node d = new Node(8);
+        Node e = new Node(16);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        display(a);
+    }
+}
+
+
+2) reverse a linkedlist
+public class Main {
+    public  static void display(Node head){
+        Node temp=head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+    public  static void displayr(Node head){
+        if (head==null){
+            return;
+        }
+        displayr(head.next);
+        System.out.print(head.data+" ");
+        //displayr(head.next);
+    }
+
+
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+             this.data=data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(9);
+        Node d = new Node(8);
+        Node e = new Node(16);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        display(a);
+        displayr(a);
+    }
+}
+
+3):- print length of linkedlist
+public class Main {
+    public static int length(Node a){
+        int count=0;
+        while (a!=null){
+            count++;
+            a=a.next;
+        }
+        return count;
+    }
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+             this.data=data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(9);
+        Node d = new Node(8);
+        Node e = new Node(16);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        System.out.println();
+        System.out.println("length of linkedlist = "+length(a));
+    }
+}
+
+----------------------------------------------------------------------------------
+Second way to make linkedlist
+
+a)->
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+        int size(){ // size nikalna h 0(n) order m
+            Node temp = head;
+            int count =0;
+            while (temp != null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size());
+      
+    }
+}
+
+b)-> inset new element
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+        int size(){
+            Node temp = head;
+            int count =0;
+            while (temp != null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size());
+        // insert new element
+        ll.insertAtEnd(12);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size());
+    }
+}
+
+
+//2nd way to insert method at end
+public class Main {
+    public static void insertAtEnd(Node head,int val){
+        Node temp = new Node(val);
+        Node t = head;
+        while (t.next != null){
+            t=t.next;
+        }
+        t.next= temp;
+    }
+    public  static void display(Node head){
+        Node temp=head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(9);
+        Node d = new Node(8);
+        Node e = new Node(16);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        display(a);
+        System.out.println();
+        insertAtEnd(a,87);
+        display(a);
+    }
+}
+ 
+
+(c) -> insert element in beginning
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+        void inserAtBeginning(int val) {
+            Node temp = new Node(val);
+            if (head == null) { //empty list
+                head = tail = temp;
+                //insertAtEnd(val);
+            } else {  // non empty list
+                temp.next = head;
+                head = temp;
+            }
+        }
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+        int size(){
+            Node temp = head;
+            int count =0;
+            while (temp != null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size());
+        // insert new element
+        ll.insertAtEnd(12);
+        ll.display();
+        ll.inserAtBeginning(1);
+        ll.inserAtBeginning(2);
+        System.out.println();
+        ll.display();
+    }
+}
+
+// 4) :-> insert element at middle
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+        void inserAtMid(int index,int val){
+            Node t = new Node(val);
+            Node temp = head;
+            if (index == size()){
+                insertAtEnd(val);
+                return;
+            } else if (index==0) {
+                inserAtBeginning(val);
+                return;
+            }
+            else if (index<0 || index>size()) {
+                System.out.println("wrong index");
+                return;
+            }
+
+            for (int i=0;i<=index-1;i++){
+//                t.next = head;
+                temp=temp.next;
+            }
+            t.next = temp.next;
+            temp.next = t;
+        }
+        void inserAtBeginning(int val) {
+            Node temp = new Node(val);
+            if (head == null) { //empty list
+                head = tail = temp;
+                //insertAtEnd(val);
+            } else {  // non empty list
+                temp.next = head;
+                head = temp;
+            }
+        }
+      
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+        int size(){
+            Node temp = head;
+            int count =0;
+            while (temp != null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size());
+        // insert new element
+        ll.insertAtEnd(12);
+        ll.display();
+//        ll.inserAtBeginning(1);
+        ll.inserAtBeginning(2);
+        System.out.println();
+        ll.display();
+        System.out.println();
+        ll.inserAtMid(3,9);
+        ll.display();
+        System.out.println();
+        ll.inserAtMid(0,9);
+        ll.display();
+    }
+}
+
+
+// 5):- get a n element
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+        }
+
+        int getA(int index){
+            Node temp = head;
+              if (index<0 || index>size()) {
+                System.out.println("wrong index");
+                return -1;
+            }
+            for (int i=0;i<index;i++){
+                temp=temp.next;
+            }
+            return temp.data;
+        }
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+        int size(){
+            Node temp = head;
+            int count =0;
+            while (temp != null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+
+        System.out.println(ll.getA(2));
+    }
+}
+
+(6):-> get size in another way  (order of 1)
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        int size =0;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next = temp;
+            }
+            tail = temp;
+            size++;
+        }
+   
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
+            }
+        }
+
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(8);
+        ll.display();
+        System.out.println();
+
+        System.out.println(ll.size);
+    }
+}
+----------------------------------------------------------------------------
+#leadcode question :-
+
+1) :- Delete node in a linkedlist
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node (int data){
+            this.data = data;
+        }
+    }
+    public static class LinkedList{
+        Node head = null;
+        Node tail = null;
+        int size =0;
+        void insertAtEnd(int val){
+            Node temp = new Node(val);
+            if (head==null){
+                head=temp;
+            }
+            else {
+                tail.next=temp;
+            }
+            tail=temp;
+            size++;
+        }
+        void display(){
+            Node temp = head;
+            while (temp != null){
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }
+        }
+        void deleteNode(Node node){
+            node.data = node.next.data;
+            node.next = node.next.next;
+        }
+
+    }
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(1);
+        ll.insertAtEnd(2);
+        ll.insertAtEnd(3);
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(6);
+        ll.display();
+        System.out.println();
+        System.out.println(ll.size);
+        System.out.println();
+        Node current = ll.head;
+        while (current != null && current.data != 3) {
+            current = current.next;
+        }
+        ll.deleteNode(current);
+        ll.display();
+    }
+}
+
+Q-2) finding nth node from end of linkedlist
+
+m-1)
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node (int data){
+            this.data=data;
+        }
+    }
+
+       public static Node nthNode(Node head,int n){
+            int size=0;
+            Node temp=head;
+            while (temp!=null){
+                size++;
+                temp=temp.next;
+            }
+            int m = size-n+1;
+            temp=head;
+            for (int i=1;i<=m-1;i++){
+                temp=temp.next;
+            }
+            return temp;
+        }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(4);
+        Node d = new Node(5);
+        Node e = new Node(12);
+        Node f = new Node(10);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        Node q = nthNode(a,3);
+        System.out.print(q.data);
+    }
+}
+
+m-2)
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node (int data){
+            this.data=data;
+        }
+    }
+        public static Node nthNode2(Node head,int n){
+            Node slow=head;
+            Node fast=head;
+            for (int i=1;i<=n;i++){
+                fast=fast.next;
+            }
+            while (fast!=null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+            return slow;
+        }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(4);
+        Node d = new Node(5);
+        Node e = new Node(12);
+        Node f = new Node(10);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        Node q = nthNode2(a,3);
+        System.out.print(q.data);
+    }
+}
+
+Q-3) -> removing Nth Node from end of linkedlist
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static void display(Node head){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    public static Node removingNthElement(Node head,int n){
+        Node slow = head;
+        Node fast = head;
+        for (int i=1;i<=n;i++){
+            fast = fast.next;
+        }
+        if (fast==null){
+            head=head.next;
+            return head;
+        }
+        else {
+            while (fast.next != null) {
+                fast = fast.next;
+                slow = slow.next;
+            }
+
+            // slow.data=slow.next.data;
+            slow.next = slow.next.next;
+            return head;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(4);
+        Node d = new Node(5);
+        Node e = new Node(12);
+        Node f = new Node(10);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        System.out.print("original linkedlist = ");
+        display(a);
+       a= removingNthElement(a,6);
+        System.out.print("removing Nth Node from end of linkedlist = ");
+        display(a);
+    }
+}
+
+--------------------------------------------------------------
+q-4)/leetcode (Q-1288) 
+finding intersection of two linked lists :-
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static void display(Node head){
+        Node temp=head;
+        int size=0;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+            size++;
+        }
+        System.out.println();
+    }
+    public static int length(Node head){
+        int length=0;
+        Node temp = head;
+        while (temp!=null){
+            length++;
+            temp=temp.next;
+        }
+        return length;
+    }
+    public static int intersection(Node head1, Node head2) {
+        int length1 = length(head1);
+        int length2 = length(head2);
+
+        Node temp1 = head1;
+        Node temp2 = head2;
+
+        if (length1 > length2) {
+            int steps = length1 - length2;
+            for (int i = 0; i < steps; i++) {
+                temp1 = temp1.next;
+            }
+        } else {
+            int steps = length2 - length1;
+            for (int i = 0; i < steps; i++) {
+                temp2 = temp2.next;
+            }
+        }
+        while (temp1 != temp2) {
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+        return temp1.data;
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(4);
+        Node d = new Node(11);
+        Node e = new Node(12);
+        Node f = new Node(10);
+        Node g = new Node(90);
+        Node h = new Node(9);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        g.next=h;
+        h.next=d;
+        display(a);
+        display(g);
+        System.out.println();
+        System.out.println(intersection(a,g));
+    }
+}
+
+//(Q-5) && leetcode => Finding middle element in linkedlist (if total no. of node is odd or even(then find right mid node)
+public class Main {
+    public static class Node {
+        int data;
+        Node next;
+         Node(int data){
+            this.data =data;
+        }
+    }
+    public static int FindMiddle(Node head){
+        Node fast = head;
+        Node slow = head;
+        while (fast!=null && fast.next !=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow.data;
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(12);
+        Node d = new Node(43);
+        Node e = new Node(10);
+        Node f = new Node(9);
+        a.next= b;
+        b.next= c;
+        c.next= d;
+        d.next= e;
+        e.next= f;
+        System.out.println( FindMiddle(a));
+    }
+}
+
+(M-2)  (if total no. of node is odd or even(then find left mid node)
+
+public class Main {
+    public static class Node {
+        int data;
+        Node next;
+         Node(int data){
+            this.data =data;
+        }
+    }
+    public static int FindMiddle(Node head){
+        Node fast = head;
+        Node slow = head;
+        while (fast!=null && fast.next.next !=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        return slow.data;
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(100);
+        Node b = new Node(13);
+        Node c = new Node(12);
+        Node d = new Node(43);
+        Node e = new Node(10);
+        Node f = new Node(9);
+        a.next= b;
+        b.next= c;
+        c.next= d;
+        d.next= e;
+        e.next= f;
+        System.out.println( FindMiddle(a));
+    }
+}
+
+-----------------------------------------------------------------------------------------
+Q-7) && leetcode (141)  Cycle in a linkedlist
+
+-----------------------------------------------------------------------------------------
+//Q-8) find out the node where cycle begins, i.e. the node at which the tail node points.
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static int findCyclicNode(Node head){
+        Node fast=head;
+        Node slow = head;
+        while (fast!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if (slow==fast){
+                break;
+            }
+        }
+        Node temp = head;
+        while (temp!=slow){
+            slow=slow.next;
+            temp=temp.next;
+        }
+        return slow.data;
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(1);
+        Node b = new Node(2);
+        Node c = new Node(3);
+        Node d = new Node(4);
+        Node e = new Node(5);
+        Node f = new Node(6);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        f.next=c;
+        System.out.println(findCyclicNode(a));
+    }
+}
+
+------------------------------------------------------------------------------------
+//(Q-9) Merge two sorted linkedlist
+public class Main {
+    public static class ListNode{
+        int data;
+        ListNode next;
+        ListNode(int data){
+            this.data=data;
+        }
+    }
+    public static ListNode MergeTwoLinkedlist(ListNode list1,ListNode list2){
+        ListNode temp1=list1;
+        ListNode temp2=list2;
+        ListNode head = new ListNode(100);
+        ListNode temp = head;
+        while (temp1 !=null && temp2 !=null){
+            ListNode temp3;
+            if (temp1.data < temp2.data ){
+                ListNode a = new ListNode(temp1.data);
+                temp.next=a;
+                temp=a;
+                temp1=temp1.next;
+            }
+            else {
+                ListNode a = new ListNode(temp2.data);
+                temp.next=a;
+                temp=a;
+                temp2=temp2.next;
+            }
+        }
+        if(temp1==null){
+            temp.next=temp2;
+        }
+        else{
+            temp.next=temp1;
+        }
+        return head.next;
+    }
+    public static void display(ListNode head){
+        ListNode temp=head;
+        while (temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(3);
+        ListNode c = new ListNode(5);
+        ListNode d = new ListNode(8);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+
+        ListNode f = new ListNode(2);
+        ListNode g = new ListNode(4);
+        ListNode h = new ListNode(6);
+        ListNode i = new ListNode(7);
+        f.next=g;
+        g.next=h;
+        h.next=i;
+
+
+        ListNode mergedList = MergeTwoLinkedlist(a, f);
+        display(mergedList);
+    }
+}
+
+# method-2 :-
+"""""""""""""
+public class Main {
+    public static class ListNode{
+        int data;
+        ListNode next;
+        ListNode(int data){
+            this.data=data;
+        }
+    }
+    public static ListNode MergeTwoLinkedlist(ListNode list1,ListNode list2){
+
+        ListNode t1=list1;
+        ListNode t2=list2;
+        ListNode h = new ListNode(100);
+        ListNode t = h;
+        while (t1 !=null && t2 !=null){
+            if (t1.data < t2.data ){
+                t.next=t1;
+                t=t1;
+                t1=t1.next;
+            }
+            else {
+                ListNode a = new ListNode(t2.data);
+                t.next=a;
+                t=a;
+                t2=t2.next;
+            }
+            if(t1==null){
+                t.next=t2;
+            }
+            else{
+                t.next=t1;
+            }
+
+        }
+        return h.next;
+    }
+    public static void display(ListNode head){
+        ListNode temp=head;
+        while (temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(3);
+        ListNode c = new ListNode(5);
+        ListNode d = new ListNode(8);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+
+        ListNode f = new ListNode(2);
+        ListNode g = new ListNode(4);
+        ListNode h = new ListNode(6);
+        ListNode i = new ListNode(7);
+        f.next=g;
+        g.next=h;
+        h.next=i;
+        ListNode mergedList = MergeTwoLinkedlist(a, f);
+        display(mergedList);
+    }
+}
+
+q-11) find even or odd element in linkedlist
+
+public class Main {
+    public static class Node{
+        int data;
+        Node next;
+        Node(int data){
+            this.data=data;
+        }
+    }
+    public static void EvenOdd(Node head){
+        Node temp=head;
+        Node tempe = new Node(0);
+        Node tempo = new Node(-1);
+        while (temp != null){
+            if (temp.data%2 ==0){
+                temp=temp.next;
+            }
+                else {
+                System.out.print(temp.data+" ");
+                temp=temp.next;
+            }
+        }
+        Node temp1=head;
+        while (temp1 != null) {
+            if (temp1.data % 2 != 0) {
+                temp1 = temp1.next;
+            } else {
+                System.out.print(temp1.data + " ");
+                temp1 = temp1.next;
+            }
+        }
+        }
+ 
+    public static void main(String[] args) {
+        Node a = new Node(3);
+        Node b = new Node(5);
+        Node c = new Node(4);
+        Node d = new Node(1);
+        Node e = new Node(2);
+        Node f = new Node(8);
+        Node g = new Node(10);
+        Node h = new Node(13);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        f.next=g;
+        g.next=h;
+       EvenOdd(a);
+        System.out.println();
+        
+    }
+}
+
+Q-12) arrange a linkedlist even indexing element come first than odd indexing element come.
+
+public class Main {
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+    public static ListNode EvenOdd(ListNode head) {
+        if (head==null){
+            return head;
+        }
+        ListNode temp = head;
+        ListNode tempo = head;
+        ListNode tempe = head.next;
+        ListNode evenHead = tempe;
+
+        while (tempe != null  && tempe.next !=null) {
+            tempo.next = tempo.next.next;
+            tempo = tempo.next;
+
+            tempe.next = tempe.next.next;
+            tempe = tempe.next;
+        }
+        tempo.next = evenHead;
+
+        return head;
+    }
+    public static void display(ListNode head){
+        ListNode temp=head;
+        while (temp!=null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        ListNode a = new ListNode(2);
+        ListNode b = new ListNode(1);
+        ListNode c = new ListNode(3);
+        ListNode d = new ListNode(5);
+        ListNode e = new ListNode(6);
+        ListNode f = new ListNode(4);
+        ListNode g = new ListNode(7);
+        //ListNode h = new ListNode(13);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        f.next=g;
+       // g.next=h;
+
+      ListNode evennn =  EvenOdd(a);
+       // System.out.println(getElementAt(a,0));
+        display(evennn);
+    }
+}
+
+// Q-13) remove duplicate element in linkedlist
+//  1->1->2->2->3->3->3->4->4->5->1->1   to 1->2->3->4->4
+
+public class Main {
+    public static class ListNode{
+        int data;
+        ListNode next;
+        ListNode(int data){
+            this.data=data;
+        }
+    }
+    public static void RemoveDuplicate(ListNode head) {
+        ListNode temp = head;
+        while (temp != null && temp.next != null){
+            if (temp.data == temp.next.data){
+                temp.next =temp.next.next;
+
+            }
+            else {
+                temp=temp.next;
+            }
+        }
+    }
+    public static void printList(ListNode head) {
+        ListNode current = head;
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+    }
+
+    public static void main(String[] args) {
+        ListNode a = new ListNode(1);
+        ListNode b = new ListNode(1);
+        ListNode c = new ListNode(2);
+        ListNode d = new ListNode(3);
+        ListNode e = new ListNode(3);
+        ListNode f = new ListNode(3);
+        ListNode g = new ListNode(4);
+        ListNode h = new ListNode(4);
+        ListNode i = new ListNode(5);
+        ListNode j = new ListNode(1);
+        ListNode k = new ListNode(1);
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        e.next=f;
+        f.next=g;
+        g.next=h;
+        h.next=i;
+        i.next=j;
+        j.next=k;
+        RemoveDuplicate(a);
+        printList(a);
+    }
+}
+
+
+//Q-14)  reverse a linkedlist and write a new head.
+
+method:-1) => using recurssion
+
+public class Main {
+    public static class ListNode{
+        int val;
+        ListNode next;
+        ListNode(int val){
+            this.val=val;
+        }
+    }
+    public static ListNode reverse(ListNode head){
+        if (head.next == null){
+            return head;
+        }
+        ListNode newHead = reverse(head.next);
+        head.next.next=head;
+        head.next =null;
+        return newHead;
+    }
+
+public static void display(ListNode head) {
+    ListNode current = head;
+    while (current != null) {
+        System.out.print(current.val + " ");
+        current = current.next;
+    }
+}
+    public static void main(String[] args) {
+        ListNode a = new ListNode(4);
+        ListNode b = new ListNode(2);
+        ListNode c = new ListNode(1);
+        ListNode d = new ListNode(5);
+        ListNode e = new ListNode(3);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        display(a);
+        System.out.println();
+       ListNode rev= reverse(a);
+        display(rev);
+    }
+}
+
+
+// using iteration
+
+public class Main {
+    public static class ListNode{
+        int val;
+        ListNode next;
+        ListNode(int val){
+            this.val=val;
+        }
+    }
+        public static ListNode ReverseList(ListNode head){
+        ListNode temp = head;
+        ListNode prev = null;
+        while (temp != null ){
+            ListNode nextTemp = temp.next;
+            temp.next=prev;
+            prev=temp;
+            temp=nextTemp;
+        }
+        return prev;
+    }
+    public static void display(ListNode head) {
+        ListNode current = head;
+        while (current != null) {
+            System.out.print(current.val + " ");
+            current = current.next;
+        }
+    }
+    public static void main(String[] args) {
+        ListNode a = new ListNode(4);
+        ListNode b = new ListNode(2);
+        ListNode c = new ListNode(1);
+        ListNode d = new ListNode(5);
+        ListNode e = new ListNode(3);
+
+        a.next=b;
+        b.next=c;
+        c.next=d;
+        d.next=e;
+        ListNode rev= ReverseList(a);
+        display(rev);
+    }
+}
+
+panding  (Q-15) :- pallindrom number
+
+(Q-16) :- random pointers 
+
+public class Main {
+    public static class ListNode{
+        int val;
+        ListNode next;
+        ListNode random;
+        ListNode(int val){
+            this.val=val;
+        }
+    }
+    public static ListNode deepCopy(ListNode head){
+        ListNode head2 = new ListNode(0);
+        ListNode temp2 = head2;
+        ListNode temp1 = head;
+        // creating deep copy
+        while (temp1!=null){
+            ListNode t = new ListNode(temp1.val);
+            temp2.next = t;
+            temp2 = t;
+            temp1=temp1.next;
+        }
+        head2 = head2.next;
+        temp2 = head2;
+        temp1 = head;
+        //alternate connection
+        ListNode temp = new ListNode(-1);
+        while (temp1!=null){
+            temp.next=temp1;
+            temp1 = temp1.next;
+            temp = temp.next;
+
+            temp.next=temp2;
+            temp2=temp2.next;
+            temp=temp.next;
+        }
+        temp2 = head2;
+        temp1 = head;
+
+        //assign random pointers
+        while (temp1 != null && temp2 != null) {
+            if (temp1.random == null) {
+                temp2.random = null;
+            } else {
+                temp2.random = temp1.random.next;
+            }
+
+            temp1 = temp2.next;
+            if (temp1!=null) {
+                temp2 = temp1.next;
+            }
+        }
+        temp2=head2;
+        temp1=head;
+            // separating the lists
+            while (temp1 != null && temp1.next != null){
+                temp1.next = temp2.next;
+                temp1=temp1.next;
+                if (temp1==null){
+                    break;
+                }
+                temp2.next=temp1.next;
+                if (temp2.next==null) {
+                    temp2 = temp2.next;
+                }
+            }
+        return head2;
+    }
+    public static void display(ListNode head2) {
+        ListNode current = head2;
+        while (current != null) {
+            System.out.print(current.val + " ");
+            current = current.next;
+        }
+    }
+    public static void main(String[] args) {
+        ListNode a = new ListNode(7);
+        ListNode b = new ListNode(13);
+        ListNode c = new ListNode(11);
+        ListNode d = new ListNode(10);
+        ListNode e = new ListNode(1);
+
+
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+
+        a.random = null;
+        b.random = a;
+        c.random = e;
+        d.random = c;
+        e.random = a;
+
+        ListNode aa = deepCopy(a);
+        display(aa);
+    }
+}
+
+
+--------------------------------------------------------------------------------
+
+#Doubly LinkedList :-
+```````````````````
+
+(Q-1) print Reverse a doubly linkedlist ?
+==>>
+public class Main {
+    public static class Node{
+        int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+    public static void display(Node head){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+
+    public static void displayreverse(Node tail){
+        Node temp = tail;
+        while (temp != null){
+            System.out.print(temp.val+" ");
+            temp=temp.previous;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node a = new Node(4);
+        Node b = new Node(10);
+        Node c = new Node(2);
+        Node d = new Node(99);
+        Node e = new Node(13);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.next=e;
+        d.previous=c;
+        e.previous=d;
+        e.next=null;
+
+        display(a);
+        System.out.println();
+        displayreverse(e);
+    }
+}
+
+
+Q-2) print list with any random node
+public class Main {
+    public static class Node{
+        int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+    public static void display(Node head){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void display2(Node random){
+        Node temp = random;
+        while (temp.previous != null){
+            temp=temp.previous;
+        }
+        // print the list
+
+        while (temp != null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(4);
+        Node b = new Node(10);
+        Node c = new Node(2);
+        Node d = new Node(99);
+        Node e = new Node(13);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.next=e;
+        d.previous=c;
+        e.previous=d;
+        e.next=null;
+        System.out.print("original list = ");
+        display(a);
+        System.out.println();
+        System.out.print("list access with random node = ");
+        display2(c);
+    }
+} 
+
+------------------------------------
+# second way to create doubly linkedlist.
+
+==>>
+public class Main {
+    public static class Node{
+        int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val= val;
+        }
+    }
+    public static class LinkedList {
+        Node head = null;
+        Node tail = null;
+
+        void insertAtEnd(int val) {
+            Node temp = new Node(val);
+
+            if (head == null) {
+                head = temp;
+            } else {
+                tail.next = temp;
+                temp.previous = tail;
+            }
+            tail = temp;
+
+        }
+
+        void display() {
+            Node temp1 = head;
+            while (temp1 != null) {
+                System.out.print(temp1.val + " ");
+                temp1 = temp1.next;
+            }
+        }
+        int size(){
+            Node temp=head;
+            int count=0;
+            while (temp!=null){
+                count++;
+                temp=temp.next;
+            }
+            return count;
+        }
+    }
+
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.insertAtEnd(1);
+        ll.insertAtEnd(2);
+        ll.insertAtEnd(3);
+        ll.insertAtEnd(4);
+        ll.insertAtEnd(5);
+        ll.insertAtEnd(6);
+        ll.display();
+        System.out.println();
+        System.out.print(ll.size());
+    }
+}
+
+
+(Q-3) :- // insertion at head
+
+public class Main {
+    public static class Node{
+       int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+    public static Node insertAtHead(Node head,int val){
+        Node temp = head;
+        Node t = new Node(val);
+        t.next=temp;
+        if (head != null) {
+            temp.previous = null;
+        }
+        head=t;
+        return head;
+    }
+    public  static  void display(Node head){
+        Node temp = head;
+        while (temp!= null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(1);
+        Node b = new Node(5);
+        Node c = new Node(112);
+        Node d = new Node(23);
+        Node e = new Node(28);
+        Node f = new Node(124);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.previous=c;
+        d.next=e;
+        e.previous=d;
+        e.next=f;
+        f.previous=e;
+     Node newNode =   insertAtHead(a,11);
+        display(newNode);
+    }
+}
+
+(Q-4) insertion At End
+public class Main {
+    public static class Node{
+       int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+    public static Node insertAtHead(Node head,int val){
+        Node temp = head;
+        Node t = new Node(val);
+        t.next=temp;
+        if (head != null) {
+            temp.previous = null;
+        }
+        head=t;
+        return head;
+    }
+    public static void insertAtEnd(Node head,int val){
+        Node t = new Node(val);
+        Node temp = head;
+        while (temp.next != null){
+            temp=temp.next;
+        }
+        t.previous= temp;
+        temp.next=t;
+
+    }
+    public  static  void display(Node head){
+        Node temp = head;
+        while (temp!= null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(1);
+        Node b = new Node(5);
+        Node c = new Node(112);
+        Node d = new Node(23);
+        Node e = new Node(28);
+        Node f = new Node(124);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.previous=c;
+        d.next=e;
+        e.previous=d;
+        e.next=f;
+        f.previous=e;
+
+          insertAtEnd(a,11);
+        display(a);
+    }
+}
+
+(Q-5) inserted element in the middle
+=>
+public class Main {
+    public static class Node{
+        int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+    public static void insertAtMiddle(Node head,int index,int val){
+        Node temp=head;
+        Node t = new Node(val);
+        for (int j=0;j<index-1;j++){
+            temp=temp.next;
+        }
+        temp.next.previous=t;
+        t.previous=temp;
+        t.next=temp.next;
+        temp.next=t;
+    }
+    public  static  void display(Node head){
+        Node temp = head;
+        while (temp!= null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void displayreverse(Node head){
+        Node temp = head;
+        while (temp.next!=null){
+
+            temp=temp.next;
+        }
+        while (temp !=null){
+            System.out.print(temp.val+" ");
+            temp=temp.previous;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.previous=c;
+        d.next=e;
+        e.previous=d;
+        System.out.print("original linkedlist = ");
+        display(a);
+        System.out.println();
+        insertAtMiddle(a,4,22);
+        System.out.print("inserted linkedlist = ");
+        display(a);
+        System.out.println();
+        System.out.print("reverse linkedlist = ");
+        displayreverse(a);
+    }
+}
+
+# Method 2 :-
+public class Main {
+    public static class Node{
+        int val;
+        Node next;
+        Node previous;
+        Node(int val){
+            this.val=val;
+        }
+    }
+
+    public static void insertAtMiddle(Node head,int index,int val){
+        Node s=head;
+        Node t = new Node(val);
+        for (int j=0;j<index-1;j++){
+            s=s.next;
+        }
+        Node r =s.next;
+        t.next=r;
+        t.previous=s;
+        r.previous=t;
+        s.next=t;
+    }
+    public  static  void display(Node head){
+        Node temp = head;
+        while (temp!= null){
+            System.out.print(temp.val+" ");
+            temp=temp.next;
+        }
+    }
+    public static void displayreverse(Node head){
+        Node temp = head;
+        while (temp.next!=null){
+
+            temp=temp.next;
+        }
+        while (temp !=null){
+            System.out.print(temp.val+" ");
+            temp=temp.previous;
+        }
+    }
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+        Node d = new Node(40);
+        Node e = new Node(50);
+
+        a.next=b;
+        b.previous=a;
+        b.next=c;
+        c.previous=b;
+        c.next=d;
+        d.previous=c;
+        d.next=e;
+        e.previous=d;
+        System.out.print("original linkedlist = ");
+        display(a);
+        System.out.println();
+        insertAtMiddle(a,4,22);
+        System.out.print("inserted linkedlist = ");
+        display(a);
+        System.out.println();
+        System.out.print("reverse linkedlist = ");
+        displayreverse(a);
+    }
+}
+
+(Q-6) Delete a Node in linkedlist.
