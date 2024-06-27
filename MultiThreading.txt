@@ -1,0 +1,68 @@
+# Multithreading :-
+
+class Test extends Thread{
+
+    public void run(){
+        System.out.println("thread task");
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.start();
+        //t.start(); // (Exception in thread "main" java.lang.IllegalThreadStateException)
+    }
+}
+
+ static class Test implements Runnable {
+    public void run() {
+        System.out.println("thread task 2");
+    }
+     public void run(int a) {
+         System.out.println("thread task 2");
+         a=5;
+         System.out.println(a);
+     }
+}
+
+public static void main(String[] args) {
+    Test t = new Test();
+    Thread th = new Thread(t);
+    th.start();
+
+}
+
+
+ case :-1 => Performing single task from single thread
+
+class Test extends Thread{
+    @Override
+    public void run() {
+        System.out.println("task 1 ");
+    }
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.start();
+    }
+}
+
+// case :- 3 => performing multiple task using multiple threads
+class Myclass extends Thread{
+    @Override
+    public void run() {
+        System.out.println("task 1 ");
+    }
+}
+class Myclass1 extends Thread{
+    @Override
+    public void run() {
+        System.out.println("task 2 ");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Myclass t1 = new Myclass();
+        t1.start();
+        Myclass1 t2 = new Myclass1();
+        t2.start();
+    }
+}
