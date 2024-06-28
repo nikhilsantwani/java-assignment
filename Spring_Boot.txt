@@ -1,0 +1,322 @@
+#### Spring Boot :-
+
+=====================
+
+#Main.java
+package com.progrank.main;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+
+@SpringBootApplication
+
+
+public class Main {
+
+    public static void main(String[] args) {
+      ConfigurableApplicationContext con = SpringApplication.run(Main.class, args);
+       
+       Person person = con.getBean(Person.class);
+       person.eat();
+       person.speak();
+    }
+}
+
+#Person.java
+package com.progrank.main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Person {
+	@Autowired
+	Food food;
+	
+	public void speak() {
+		System.out.print("i can able to speak !!");
+	}
+	
+	public void eat() {
+		food.recipes();
+	}
+}
+
+# Config.java
+package com.progrank.main;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+
+public class Config {
+
+	@Bean
+	public Person person() {
+		return new Person();
+	}
+}
+
+#Food.java
+package com.progrank.main;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+
+public class Food {
+	public void recipes() {
+		System.out.println("Your Food is ready now you can eat !!");
+	}
+}
+---------------------------------------
+Main.java
+package com.progrank.main;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+
+public class Main {
+
+    public static void main(String[] args) {
+      ConfigurableApplicationContext con = SpringApplication.run(Main.class, args);
+       
+       Person person = con.getBean(Person.class);
+       person.eat();
+       person.speak();
+    }
+}
+
+Person.java
+package com.progrank.main;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class Person {
+	@Autowired
+	Food food;
+	
+	public void speak() {
+		System.out.print("i can able to speak !!");
+	}
+	
+	public void eat() {
+		food.recipes();
+	}
+}
+
+Food.java
+package com.progrank.main;
+
+import org.springframework.stereotype.Component;
+
+@Component
+
+public class Food {
+	public void recipes() {
+		System.out.println("Your Food is ready now you can eat !");
+	}
+}
+
+# Application Property file :- 
+
+(http://localhost:8080/index) using this file we will change value of localhost : 8080 to any other
+using this command :-
+server.port=1536 
+
+and we don't require to write prefix or suffix with file name 
+simply using this command in application.property :-
+spring.mvc.view.prefix=/Pages/
+spring.mvc.view.suffix=.jsp
+
+
+# Data Transfer Client to Server or server to client
+
+####
+Method :- 1) Using HttpServlet Way 
+=> tb behter h jb aapke pass n no. of fields h like data,data1,data2 h tb mtlb h
+
+Index.controller
+
+package com.example.FirstWebApp;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.*;
+
+@Controller
+public class IndexController {
+	
+	@RequestMapping("/index")
+	public String index() {
+	return "index";	
+	}
+	
+	@RequestMapping("/result")
+	public String index(HttpServletRequest request) {
+	System.out.println("Value : "+request.getParameter("data"));
+	HttpSession session = request.getSession();
+	session.setAttribute("value",request.getParameter("data"));
+		return "result";	
+	}
+}
+
+
+# index.jsp
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+ Hello Home Page !!  
+ <br>
+ <a href="result?data=500">send data to server</a>
+ 
+</body>
+</html>
+
+# result.jsp
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<br> Your Output is : ${value}
+</body>
+</html>
+
+
+#### Second method :-
+
+intercontroller.java
+
+package com.example.FirstWebApp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.servlet.http.*;
+
+@Controller
+public class IndexController {
+	
+	@RequestMapping("/index")
+	public String index() {
+	return "index";	
+	}
+	
+	@RequestMapping("/result")
+	public String index(String val,HttpSession session) {
+		System.out.println("data : "+val);
+		session.setAttribute("value",val);   // it is like a heavy variable. so, everytime we use session is not convinient
+		return "result";
+	}
+}
+
+remaining part is same
+
+#=> if we replace data to value
+
+<a href="result?data=500">send data to server</a>
+
+so,it show error.
+to resolve it we require to change 
+
+public String index(String val,HttpSession session) {
+		System.out.println("data : "+val);
+		session.setAttribute("value",val);
+		return "result";
+	}
+
+you manually go and change data to val
+
+
+## to overcome this problem spring boot give methods like @RequestParam("name given in <a> tag")
+public String index(@RequestParam("val") String Data, HttpSession session) {
+		System.out.println("data : "+Data);
+		session.setAttribute("value", Data);
+		return "result";
+	}
+
+
+#### ModelAndView & Model Attributes
+
+# first way :- use model as a parameter
+
+package com.example.FirstWebApp;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.*;
+
+@Controller
+public class IndexController {
+	
+	@RequestMapping("/index")
+	public String index() {
+	return "index";	
+	}
+	
+	@RequestMapping("/result")
+	public String index(@RequestParam("abc") String Data,Model model) {
+		model.addAttribute("myvalue", Data);
+		return "result";
+	}
+}
+
+
+
+## Second way :- Using Map
+
+
+import java.util.*;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import jakarta.servlet.http.*;
+
+@Controller
+public class IndexController {
+	
+	@RequestMapping("/index")
+	public String index() {
+	return "index";	
+	}
+	
+	@RequestMapping("/result")
+	public ModelAndView index(@RequestParam("abc") String Data) {
+		Map<String,String > map = new HashMap<String,String>();
+		map.put("value",Data);
+		return new ModelAndView("result",map);
+		
+	}
+}
+
+remaining part same
+
+### ThirdPart :- 
