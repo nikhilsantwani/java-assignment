@@ -1,0 +1,283 @@
+(1)->
+[A]->constant
+// Abc.java
+class Abc {
+    Abc(){
+        int a=4,b=23;
+        System.out.println("add ="+(a+b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        Abc a = new Abc();
+    }
+}
+
+[B]-> user i/p
+// Abc.java
+import java.util.Scanner;
+class Abc {
+    Abc(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a = sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        System.out.println("add ="+(a+b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        Abc a = new Abc();
+    }
+}
+
+(2)->
+[A]->constant
+// Abc.java
+class Abc {
+    Abc(){
+       int a=92,b=8;
+        System.out.println("add ="+(a+b));
+    }
+}
+class A{
+    void show(){
+        Abc a = new Abc();
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+[B]->user i/p
+// Abc.java
+import java.util.Scanner;
+class Abc {
+    Abc(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a = sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        System.out.println("add ="+(a+b));
+    }
+}
+class A{
+    void show(){
+        Abc a = new Abc();
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        k.show();
+    }
+}
+
+(3)->
+[A]->constant
+// Abc.java
+class Abc{
+    Abc(){
+        int a=34,b=12;
+        System.out.println("sub ="+(a-b));
+        System.out.println("mul ="+(a*b));
+        System.out.println("div ="+(a/b));
+        System.out.println("mod ="+(a%b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+       Abc k = new Abc();
+
+    }
+}
+
+[B]->user i/p
+// Abc.java
+import java.util.Scanner;
+class Abc{
+    Abc(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("sub ="+(a-b));
+        System.out.println("mul ="+(a*b));
+        System.out.println("div ="+(a/b));
+        System.out.println("mod ="+(a%b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+       Abc k = new Abc();
+    }
+}
+
+(4)->
+[A]->
+// Abc.java
+import java.util.Scanner;
+class Abc{
+    Abc(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a =");
+        int a = sc.nextInt();
+        System.out.println("b =");
+        int b = sc.nextInt();
+        System.out.println("sub ="+(a-b));
+        System.out.println("mul ="+(a*b));
+        System.out.println("div ="+(a/b));
+        System.out.println("mod ="+(a%b));
+    }
+}
+class A{
+    void show(){
+        Abc A = new Abc();
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+      A k = new A();
+      k.show();
+
+    }
+}
+
+(5)->
+[A]->constant
+// Abc.java
+class Abc{
+    Abc(int a,int b){
+        System.out.println("add ="+(a+b));
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+       Abc k = new Abc(66,33);
+    }
+}
+
+[B]->
+// Abc.java
+import java.util.Scanner;
+class Abc{
+    Abc(int a,int b){
+        System.out.println("add ="+(a+b));
+
+    }
+}
+import java.util.Scanner;
+
+// main.java
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a= sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+       Abc k = new Abc(a,b);
+    }
+}
+
+(6)->
+[A]->
+// Abc.java
+class Abc{
+    Abc(int a,int b){
+        System.out.println("add ="+(a+b));
+    }
+}
+import java.util.Scanner;
+class A{
+    void show(){
+        Abc A = new Abc(88,12);
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+       A l = new A();
+       l.show();
+    }
+}
+
+[B]->
+// Abc.java
+import java.util.Scanner;
+class Abc{
+    Abc(int a,int b){
+        System.out.println("add ="+(a+b));
+    }
+}
+import java.util.Scanner;
+class A{
+    void show(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("a=");
+        int a= sc.nextInt();
+        System.out.println("b=");
+        int b = sc.nextInt();
+        Abc A = new Abc(a,b);
+    }
+}
+// main.java
+public class Main {
+    public static void main(String[] args) {
+       A l = new A();
+       l.show();
+    }
+}
+(9)
+
+[A]->
+class A{
+    int show(int a,int b){
+        int i=a+b;
+    return i;
+    }}
+    class B extends A{
+    int show2(int c,int d){
+        int j=c+d;
+        return j;
+    }
+}
+class C extends D{
+    int show3(int e,int f){
+        int k=e+f;
+        return k;
+    }
+}
+class D {
+    int show4(int g,int h){
+        int l=g+h;
+        return l;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        B k = new B();
+        int m = k.show2(55,33);
+        System.out.println(m);
+        int n =k.show(54,32);
+        System.out.println(n);
+        C l = new C();
+        int o = l.show3(53,31);
+        System.out.println(o);
+        int p = l.show4(52,30);
+        System.out.println(p);
+    }
+}
