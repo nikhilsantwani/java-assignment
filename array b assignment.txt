@@ -1,0 +1,276 @@
+(1)->
+public class Main {
+    public static void display(int[] a) {
+        for (int i=0;i<a.length;i++) {
+            System.out.println(a[i] +" ");
+        }
+        }
+
+    public static void main(String[] args) {
+        int[] a = {13,14,35,12,99};
+        display(a);
+        System.out.println();
+        int[] b = {33,54,67,12,9};
+        display(b);
+        System.out.println();
+        int[] c = {23,13,16,18,19};
+        display(c);
+        System.out.println();
+        int[] d = {3,15,16,22,19};
+        display(d);
+        int[] e = {12,34,78,44,11};
+        display(e);
+    }
+}
+
+(2)->
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = new int []{12,43,52,29,19} ;
+        System.out.println("original");
+        for (int i=0;i<=arr.length;i++){
+        System.out.println(arr[i] +" ");
+        }
+
+        System.out.println();
+        System.out.println("Array in reverse order: ");
+        for (int i = arr.length-1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+(3)->
+import java.util.*;
+public class Main {
+    public static void display(int[] a){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int length = sc.nextInt();
+        int[] ar = new int[length];
+        for (int i=0;i<=4;i++){
+            System.out.println("value");
+            ar[i] =sc.nextInt();
+        }
+        for (int i=0; i< ar.length;i++){
+            System.out.println(ar[i] +" ");
+        }
+        }
+    public static void main(String[] args) {
+        int[] ar= new int[]{0};
+        display(ar);
+        int[] b = new int[]{};
+        display(b);
+        int[] c = new int[]{};
+        display(c);
+        int[] d = new int[]{};
+        display(d);
+        int[] e = new int[]{};
+        display(e);
+    }
+}
+
+(4)->
+public class Main {
+    public static void reverse(int[] a){
+        for(int i= a.length-1;i>=0;i--){
+            System.out.print(a[i]+ " ");
+        }
+    }
+    public static void main(String[] args) {
+        int[] a = {1,2,3,4,5};
+        reverse(a);
+        System.out.println();
+        int[] b= {6,7,8,9,10};
+        reverse(b);
+        System.out.println();
+        int[] c = {11,12,13,14,15};
+        reverse(c);
+        System.out.println();
+        int[] d = {16,17,18,19,20};
+        reverse(d);
+        System.out.println();
+        int[] e = {21,22,23,24,25};
+        reverse(e);
+    }
+}
+
+(5)-> even no.
+->>>
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {2,19,41,11,6};
+        for (int i=0;i<a.length;i++){
+       if(a[i] % 2 == 0){
+           System.out.println(a[i]);
+       }
+        }
+    }
+}
+
+(b)-> user i/p
+->>>
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int length = sc.nextInt();
+
+        int[] a = new int[length];
+        for (int i=0;i<a.length;i++){
+            System.out.println("value");
+            a[i] = sc.nextInt();}
+        for (int i=0; i< a.length;i++){
+       if(a[i] % 2 == 0){
+           System.out.println(a[i]);
+       }
+        }
+    }
+}
+
+(6)->odd no.
+->>
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int length = sc.nextInt();
+
+        int[] a = new int[length];
+        for (int i=0;i<a.length;i++){
+            System.out.println("value");
+            a[i] = sc.nextInt();}
+        for (int i=0; i< a.length;i++){
+       if(a[i] % 2 != 0){
+           System.out.println(a[i]);
+       }
+        }
+    }
+}
+(7)-> position of even no.
+-->>
+public class Main {
+    public static void main(String[] args) {
+        int[] a = new int[] {2,8,3,5,7};
+            for (int i = 1; i < a.length; i = i+2)
+            {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+(b)-> user i/p
+->
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int length = sc.nextInt();
+
+        int[] a = new int[length];
+        for (int i=0;i<a.length;i++){
+            System.out.println("value");
+            a[i] = sc.nextInt();}
+        for (int i=0; i< a.length;i=i+2){
+            System.out.println(a[i]);
+        }
+    }
+}
+
+
+(8)->> position of odd no.
+-->>
+public class Main {
+    public static void main(String[] args) {
+        int[] a = new int[] {2,8,3,5,7};
+        for (int i=0;i<a.length;i =i+2){
+            System.out.println(a[i]);
+        }
+    }
+}
+
+b)-->>> user i/p
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter size");
+        int length = sc.nextInt();
+
+        int[] a = new int[length];
+        for (int i=0;i<a.length;i++){
+            System.out.println("value");
+            a[i] = sc.nextInt();}
+        for (int i=1; i< a.length;i=i+2){
+            System.out.println(a[i]);
+        }
+    }
+}
+
+(9)->
+public class Main {
+    public static void main(String[] args) {
+        int[] a ={1, 2, 3, 4, 5};
+        for (int j=0; j<a.length;j++){
+            for (int i=1; i<=10; i++){
+                System.out.println(a[j] * i + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+(10)->
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 2, 6};
+        for (int i = 0; i < a.length; i++) {
+            int count = 1;
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                    System.out.print("repeated no. are =");
+                    System.out.println(a[i] + "-" + count);
+                }
+            }
+
+        }
+    }
+}
+
+
+(11)->
+public class Main {
+    public static void main(String[] args) {
+        int j =0;
+        int[] a= {10,12,-2,-4,1,-8,9};
+        System.out.println("positive element present in array");
+      while (j<a.length)
+      {
+          if (a[j]>=0){
+              System.out.printf("%d",a[j]);
+              System.out.println();
+          }
+          j++;
+      }
+    }
+}
+(b)-> neg. integer
+public class Main {
+    public static void main(String[] args) {
+        int j =0;
+        int[] a= {10,12,-2,-4,1,-8,9};
+        System.out.println("positive element present in array");
+      while (j<a.length)
+      {
+          if (a[j]<=0){
+              System.out.printf("%d",a[j]);
+              System.out.println();
+          }
+          j++;
+      }
+    }
+}
