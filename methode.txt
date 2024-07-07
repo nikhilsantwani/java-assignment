@@ -1,0 +1,556 @@
+1)->
+a)->> const.
+class A{
+    int add(){
+        int a=32,b=21,c;
+        c=a+b;
+        System.out.println("addition=");
+        return c;
+    }
+    int sub(){
+        int a=56,b=24,c;
+        c=a-b;
+        System.out.println("sub =");
+        return c;
+    }
+    int mul(){
+        int a=45,b=22;
+        int c=a*b;
+        System.out.println("multiplication =");
+        return c;
+    }
+    int div(){
+        int a=93,b=3,c;
+        c=a/b;
+        System.out.println("division =");
+        return c;
+    }
+    int mod(){
+        int a=32,b=7,c;
+        c=a%b;
+        System.out.println("modulus =");
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        A K = new A();
+        System.out.println(K.add());
+        System.out.println(K.sub());
+        System.out.println(K.mul());
+        System.out.println(K.div());
+        System.out.println(K.mod());
+    }
+}
+
+b)-> user input
+import java.util.Scanner;
+class A{
+    int add(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a+b;
+        System.out.println("addition=");
+        return c;
+    }
+    int sub(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a-b;
+        System.out.println("sub =");
+        return c;
+    }
+    int mul(){
+        int a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        int c=a*b;
+        System.out.println("multiplication =");
+        return c;
+    }
+    int div(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a/b;
+        System.out.println("division =");
+        return c;
+    }
+    int mod(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a%b;
+        System.out.println("modulus =");
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        A K = new A();
+        System.out.println(K.add());
+        System.out.println(K.sub());
+        System.out.println(K.mul());
+        System.out.println(K.div());
+        System.out.println(K.mod());
+    }
+}
+
+(2)
+(a)-> const
+class A{
+    int add(int a, int b){
+        int c=a+b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        return c;
+    }
+    int div(int a, int b){
+        int c=a/b;
+        return c;
+    }
+    int mod(int a,int b){
+        int c=a%b;
+        return c;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        A K = new A();
+        int m = K.add(2,2);
+        int n = K.sub(4,2);
+        int o = K.mul(6,5);
+        int p = K.div(16,2);
+        int q = K.mod(6,5);
+        System.out.println("add ="+m);
+        System.out.println("sub ="+n);
+        System.out.println("mul ="+o);
+        System.out.println("div ="+p);
+        System.out.println("mod ="+q);
+    }
+}
+
+(b)->user i/p
+->import java.util.Scanner;
+
+class A{
+    int add(int a, int b){
+        int c=a+b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        return c;
+    }
+    int div(int a, int b){
+        int c=a/b;
+        return c;
+    }
+    int mod(int a,int b){
+        int c=a%b;
+        return c;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc =new Scanner(System.in);
+        System.out.println("enter value of a =");
+        int a =sc.nextInt();
+        System.out.println("enter value of b =");
+        int b =sc.nextInt();
+        A K = new A();
+        int m = K.add(a,b);
+        int n = K.sub(a,b);
+        int o = K.mul(a,b);
+        int p = K.div(a,b);
+        int q = K.mod(a,b);
+        System.out.println("add ="+m);
+        System.out.println("sub ="+n);
+        System.out.println("mul ="+o);
+        System.out.println("div ="+p);
+        System.out.println("mod ="+q);
+    }
+}
+
+3)->
+
+class A{
+    float add(float a, float b){
+        float c=a+b;
+        return c;
+    }
+    int sub(int a, int b){
+        int c=a-b;
+        return c;
+    }
+//    short mul(short s1, short s2){
+//        System.out.println("sum");
+//        System.out.println(s1+s2);
+//    }
+    byte div(byte a, byte b){
+        byte c= byte (a/b);
+        return c;
+    }
+    long mod(long a,long b){
+        long c=a%b;
+        return c;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        A K = new A();
+        float m = K.add(2,2);
+        int n = K.sub(4,2);
+//        short o = K.mul(10);
+//        byte p = K.div(16,2);
+        long q = K.mod(6,5);
+        System.out.println("add ="+m);
+        System.out.println("sub ="+n);
+//        System.out.println("mul ="+o);
+//        System.out.println("div ="+p);
+        System.out.println("mod ="+q);
+    }
+}
+
+4)
+(a)->class A{
+    float add(){
+        float a=32,b=21,c;
+        c=a+b;
+        System.out.println("addition=");
+        return c;
+    }
+    int sub(){
+        int a=56,b=24,c;
+        c=a-b;
+        System.out.println("sub =");
+        return c;
+    }
+    int mul(){
+        short a=45,b=22;
+        System.out.println("multiplication =");
+        System.out.println(a*b);
+        return 0;
+    }
+    byte div(){
+        byte a=93,b=3;
+        int c=(byte) (a/b);
+        System.out.println("division ="+c);
+        return 0;
+    }
+    long mod(){
+        long a=32,b=7,c;
+        c=a%b;
+        System.out.println("modulus =");
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A K = new A();
+        System.out.println(K.add());
+        System.out.println(K.sub());
+        System.out.println(K.mul());
+        System.out.println(K.div());
+        System.out.println(K.mod());
+    }
+}
+(b)->
+import java.util.Scanner;
+class A{
+    float add(){
+        float a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextFloat();
+        System.out.println("enter value of b =");
+        b = sc.nextFloat();
+        c=a+b;
+        System.out.println("addition=");
+        return c;
+    }
+    int sub(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a-b;
+        System.out.println("sub =");
+        return c;
+    }
+    short mul(){
+        short a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextShort();
+        System.out.println("enter value of b =");
+        b = sc.nextShort();
+        System.out.println("multiplication =");
+        System.out.println(a*b);
+        return 0;
+    }
+    byte div(){
+        byte a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextByte();
+        System.out.println("enter value of b =");
+        b = sc.nextByte();
+        System.out.println(a/b);
+        System.out.println("division =");
+        return 0;
+    }
+    long mod(){
+        long a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextLong();
+        System.out.println("enter value of b =");
+        b = sc.nextLong();
+        c=a%b;
+        System.out.println("modulus =");
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        A K = new A();
+        System.out.println(K.add());
+        System.out.println(K.sub());
+        System.out.println(K.mul());
+        System.out.println(K.div());
+        System.out.println(K.mod());
+    }
+}
+(5)->
+class A{
+    float add(){
+        float a=32f,b=42f,c;
+        c=a+b;
+        System.out.println(c);
+        return a;
+    }
+    int show(){
+        int a=23, b=43,c;
+        c=a-b;
+        return c;
+    }
+    short mul(){
+        short a=45,b=22;
+        short c = (short)(a+b);
+        return c;
+    }
+    byte div(){
+        byte a=21,b=14;
+        byte c=(byte) (a*b);
+        return c;
+    }
+    long mod(){
+        long a=32, b=11,c;
+        c=a%b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        A k = new A();
+        Sy  stem.out.println("add ="+k.add());
+        System.out.println("sub ="+k.show());
+        System.out.println("mul ="+k.mul());
+        System.out.println("div ="+k.div());
+        System.out.println("mod ="+k.mod());
+    }
+}
+
+
+(6)->
+
+import java.util.Scanner;
+class A{
+    void add(){
+        int a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextInt();
+        System.out.println("enter value of b =");
+        b = sc.nextInt();
+        c=a+b;
+        System.out.println("addition=");
+        System.out.println(c);
+    }
+    double sub(){
+        double a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextDouble();
+        System.out.println("enter value of b =");
+        b = sc.nextDouble();
+        c=a-b;
+        System.out.println("sub =");
+        return c;
+    }
+    short mul(){
+        short a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextShort();
+        System.out.println("enter value of b =");
+        b = sc.nextShort();
+        System.out.println("multiplication =");
+        System.out.println(a*b);
+        return 0;
+    }
+    byte div(){
+        byte a,b;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextByte();
+        System.out.println("enter value of b =");
+        b = sc.nextByte();
+        System.out.println(a/b);
+        System.out.println("division =");
+        return 0;
+    }
+    long mod(){
+        long a,b,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter value of a =");
+        a = sc.nextLong();
+        System.out.println("enter value of b =");
+        b = sc.nextLong();
+        c=a%b;
+        System.out.println("modulus =");
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        A K = new A();
+        K.add();
+        System.out.println(K.sub());
+        System.out.println(K.mul());
+        System.out.println(K.div());
+        System.out.println(K.mod());
+    }
+}
+
+(7)->
+class A {
+    void show() {
+        int n = 153, p = 0, temp = n;
+        while (n > 0) {
+            int rem = n % 10;
+            p = (p) + (rem * rem * rem);
+            n = n / 10;
+        }
+        if (temp == p) {
+            System.out.println("armstrong no.");
+        } else {
+            System.out.println("not armstrong no.");
+        }
+    }
+
+    void palli() {
+        int num = 121, r, sum = 0, temp = num;
+        while (num > 0) {
+            r = num % 10;
+            sum = (sum * 10) + r;
+            num = num / 10;
+        }
+        if (sum == temp) {
+            System.out.println("pallindrome no.");
+        } else {
+            System.out.println("not pallindrome");
+        }
+    }
+
+    void prime() {
+        int num = 33, i = 2;
+        boolean flag = false;
+        while (i <= num / 2) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+            ++i;
+        }
+        if (flag) {
+            System.out.println("prime no.");
+        } else {
+            System.out.println("not a prime no.");
+        }
+    }
+
+    void swap() {
+        int a = 45, b = 30;
+        System.out.println("value of a=" + a);
+        System.out.println("value of b=" + b);
+        a = a * b;
+        b = a / b;
+        a = a / b;
+        System.out.println("value of a=" + a);
+        System.out.println("value of b=" + b);
+    }
+
+    void factorial() {
+        int n1 = 0, n2 = 1, n3, i, count = 10;
+        System.out.println(n1 + "" + n2);
+
+        for (i = 2; i < count; ++i) {
+            n3 = n1 + n2;
+            System.out.println("factorial=" + n3);
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+
+    void reverse() {
+        int num = 3452, reverse = 0, rem;
+        while (num != 0) {
+            rem = num % 10;
+            reverse = reverse * 10 + rem;
+            num = num / 10;
+        }
+        System.out.println("reverse mo.");
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        A K = new A();
+        K.show();
+        K.palli();
+        K.prime();
+        K.swap();
+        K.factorial();
+        K.reverse();
+    }
+}
