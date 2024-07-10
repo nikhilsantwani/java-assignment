@@ -1,0 +1,285 @@
+(1)->
+a)-> constant
+-> class parent{
+    void show(){
+        System.out.println("this is parent class");
+        System.out.println("hii");
+        System.out.println("hello");
+        System.out.println("how are you");
+        System.out.println("ok");
+    }
+}
+class child extends parent{
+void show2(){
+    System.out.println("this is child class");
+    System.out.println("hello");
+    System.out.println("how are you");
+    System.out.println("noting");
+    System.out.println("ok");
+}
+}
+public class Main {
+    public static void main(String[] args){
+
+        child c= new child();
+        c.show();
+        c.show2();
+    }
+}
+b)->
+
+import java.util.Scanner;
+class parent{
+    void show(){
+        char ab,ac,ad,ae,af;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter ab =");
+        ab =sc.next().charAt(0);
+        System.out.println("enter ab =");
+        ac =sc.next().charAt(0);
+        System.out.println("enter ac =");
+        ad =sc.next().charAt(0);
+        System.out.println("enter ad =");
+        ae =sc.next().charAt(0);
+        System.out.println("enter ae =");
+        af =sc.next().charAt(0);
+    }
+}
+class child extends parent{
+    void show1(){
+        char ba,bc,bd,be,bf;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter ba =");
+        ba =sc.next().charAt(0);
+        System.out.println("enter bc =");
+        bc =sc.next().charAt(0);
+        System.out.println("enter bd =");
+        bd =sc.next().charAt(0);
+        System.out.println("enter be =");
+        be =sc.next().charAt(0);
+        System.out.println("enter bf =");
+        bf =sc.next().charAt(0);
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        child c = new child();
+        c.show();
+        c.show1();
+    }
+}
+(2)->
+import java.util.*;
+class parent{
+    parent(){
+        System.out.println("parent class");
+    }
+    void add(){
+        int a=14,b=8;
+        int c=a+b;
+        System.out.println("add="+c);
+
+    }
+}
+class child extends parent {
+    child(){
+        super();
+        System.out.println("child class");
+    }
+    void sub(){
+        int a=14,b=8;
+        int c=a-b;
+        System.out.println("sub="+c);
+    }
+
+}
+public class Main {
+    public static void main(String[] args) {
+        child k=new child();
+        k.add();
+        k.sub();
+    }
+}
+
+
+(4)->
+class parent{
+    void show(){
+        int a=25,b=12,c;
+        c=a+b;
+        System.out.print("add =");
+        System.out.println(c);
+    }
+    int show1(){
+        int a=42,b=36;
+        int c=a-b;
+        System.out.print("sub =");
+        System.out.println(c);
+        return c;
+    }
+        }
+        class child extends parent{
+    int addition(int a,int b){
+        int c=a+b;
+        System.out.print("addition =");
+        System.out.println(c);
+        return 0;
+    }
+    void subt(int a, int b){
+        int c=a-b;
+        System.out.print("subtract =");
+        System.out.println(c);
+    }
+        }
+        public class Main{
+    public static void main(String[] args){
+        child c = new child();
+        c.show();
+        c.show1();
+        c.addition(2,5);
+        c.subt(6,2);
+    }
+        }
+
+(5)->
+class parent{
+    float show(){
+        float a=3.5f,b=2.7f;
+        float c=a*b;
+        System.out.print("Mul = ");
+        System.out.println(c);
+        return 0;
+    }
+}
+class child extends parent{
+    int show1(int a, int b){
+        int c= a/b;
+        System.out.print("division =");
+        System.out.println(c);
+        return 0;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        child c = new child();
+        c.show();
+        c.show1(9,3);
+    }
+}
+
+(6)->
+import java.util.Scanner;
+class parent{
+    byte show(){
+        byte a=123,b=32;
+        byte e=(byte) (a%b);
+
+        return e;
+    }
+}
+class child extends parent{
+    short show1(short a, short b){
+        short c= (short)(a+b);
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        child c =new child();
+        byte v=c.show();
+        System.out.println("mod="+v);
+        short x= c.show1((short)4,(short)6);
+        System.out.println("add="+x);
+    }
+}
+
+(8)->
+import java.util.*;
+class parent{
+    int show() {
+        int a ;
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" enter age  =");
+        a = sc.nextInt();
+        if (a >= 18) {
+            System.out.println("eligible ");
+        } else {
+            System.out.println("not eligible");
+        }
+        return 0;
+    }
+}
+class child extends parent {
+    int show1(){
+        char ch;
+        int age;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter ch =");
+        ch = sc.next().charAt(0);
+        System.out.println("enter age=");
+        age = sc.nextInt();
+        if(ch == 'm' && age>=21){
+            System.out.println("male && eligible for marrige ");
+        }
+        else if(ch == 'f' && age<= 18){
+            System.out.println("female && eligible for marrige");
+        }
+        else {
+            System.out.println("not eligible ");
+        }
+        return 0;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        child c = new child();
+        c.show();
+        c.show1();
+    }
+}
+
+(7)->
+class parent{
+class parent{
+    boolean show(boolean a ) {
+        return a;
+    }
+    }
+class child extends parent{
+    boolean show1(boolean a){
+        return a;
+    }
+    }
+public class Main {
+    public static void main(String[] args) {
+        child c = new child();
+       boolean s= c.show(true);
+        System.out.println(s);
+        boolean x= c.show(false);
+        System.out.println(x);
+    }
+}
+b)->
+class parent{
+    boolean show(boolean a ) {
+        return a;
+    }
+    }
+class child extends parent{
+    boolean show1(boolean a){
+        return a;
+    }
+    }
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        boolean aa= sc.nextBoolean();
+        child c = new child();
+
+       boolean s= c.show(aa);
+        System.out.println(s);
+        boolean bb= sc.nextBoolean();
+        boolean x= c.show(bb);
+        System.out.println(x);
+    }
+}
