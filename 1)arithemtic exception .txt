@@ -1,0 +1,108 @@
+1)arithemtic exception 
+calculcator :user input 
++ =>
+- =>
+* =>
+/ => try catch 
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("Enter number 1 = ");
+            float num1 = sc.nextFloat();
+            System.out.println("Enter number 2 = ");
+            float num2 = sc.nextFloat();
+            System.out.println("enter operators = ");
+            char operators = sc.next().charAt(0);
+            float result;
+            switch (operators){
+                case '+': {
+                    result = num1 + num2;
+                    System.out.println(result);
+                    break;
+                }
+                case '-':{
+                    result = num1 - num2;
+                    System.out.println(result);
+                    break;
+                }
+                case '*':{
+                    result = num1 * num2;
+                    System.out.println(result);
+                    break;
+                }
+                case '/':{
+                    if (num2 == 0) {
+                        throw new ArithmeticException("Division by zero is not allowed");
+                    }
+                    result = num1 / num2;
+                    System.out.println(result);
+                    break;
+                }
+                default:{
+                    System.out.println("invalid operators");
+                }
+            }
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
+
+2)null pointer excpetion :
+form 
+name: null :invlaid input please enter name 
+fname :
+mname:
+address:
+emailid: regex 
+password :regex 
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("enter name = ");
+            String name = null;
+            System.out.println("enter fname = ");
+            String fname = sc.nextLine();
+            System.out.println("enter mname = ");
+            String mname = sc.nextLine();
+            System.out.println("enter address = ");
+            String address = sc.nextLine();
+            System.out.println("enter email = ");
+            String emailid = sc.nextLine();
+            System.out.println("enter password = ");
+            String password = sc.nextLine();
+            System.out.println(name); // This will trigger a NullPointerException
+            System.out.println(fname);
+            System.out.println(mname);
+            System.out.println(address);
+            System.out.println(fname.length());
+            System.out.println(name.length());
+            System.out.println(emailid);
+            System.out.println(password);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+
+3)
+arrayindexoutofbound exception :
+constant 
+
+4)
+numberformat exception :
+String user 
+integer convert 
+
+5)
+all javatpoint code 
