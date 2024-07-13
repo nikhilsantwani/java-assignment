@@ -1,0 +1,51 @@
+What are the pillars of Object-Oriented Programming? Explain each one.
+What is the difference between composition and inheritance?
+
+Key Differences:
+
+Relationship: Composition represents a "has-a" relationship, while inheritance represents an "is-a" relationship.
+Flexibility: Composition offers more flexibility because it allows objects to be composed of different components, which can vary independently. Inheritance establishes a fixed relationship between classes.
+Code Reusability: Both composition and inheritance promote code reuse, but composition is generally considered more flexible and preferable when code reuse is the primary concern.
+Encapsulation: Composition often encapsulates objects within a class, whereas inheritance exposes the structure of the superclass to its subclasses.
+
+How does Java support multiple inheritance?
+What is method overloading? Can you provide an example?
+Method overloading is a feature in object-oriented programming languages where you can define multiple methods in the same class with the same name but with different parameters. The compiler or interpreter determines which method to execute based on the number, type, and order of the parameters passed to it.
+
+How does method overriding differ from method overloading? Provide an example.
+
+
+Explain the concept of interface in Java. Why would you use interfaces?
+
+What are abstract classes? How do they differ from interfaces?
+What is the purpose of the super() keyword in Java?
+What is a static method? How is it different from an instance method?
+What is the purpose of the static keyword in Java?
+How do you achieve encapsulation in Java?
+What is the difference between ArrayList and LinkedList? When would you use one over the other?
+Explain the concept of constructors in Java. Can you have multiple constructors in a class?
+What is the difference between == and .equals() in Java?
+How does Java support method overriding with the @Override annotation?
+What is the instanceof operator used for in Java?
+What is the purpose of the finalize() method in Java?
+Explain the concept of a static initializer block in Java.
+What is a singleton class? How do you implement it in Java?
+How does Java support polymorphism? Provide examples.
+What is Object-Oriented Programming (OOP)?
+What are the four main principles of OOP?
+Explain encapsulation with an example.
+What is inheritance? How does it promote code reusability?
+What is polymorphism? How is it implemented in Java?
+Differentiate between method overloading and method overriding.
+What is the purpose of the super keyword in Java?
+What is the final keyword used for?
+Explain abstraction and provide an example.
+What is the difference between an abstract class and an interface?
+What is a constructor?
+What is the difference between a constructor and a method?
+What is the this keyword used for in Java?
+What are access modifiers in Java?
+Explain the static keyword in Java.
+
+what is defalt method ?
+ A default method is a method declared within an interface using the default keyword. It provides a default implementation for the method, allowing classes that implement the interface to inherit the implementation without having to provide their own.
