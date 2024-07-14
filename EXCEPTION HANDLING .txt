@@ -1,0 +1,129 @@
+EXCEPTION HANDLING :
+Write a Java program that generates an ArithmeticException and handles it using a try-catch block.
+public class Main {
+    public static void main(String[] args) {
+        int a=10,b=0,c=0;
+        try {
+            System.out.println(a/b);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
+class ArithmeticExceptionExample {
+    public static void main(String[] args) {
+        int numerator = 10;
+        int denominator = 0;
+        try {
+            //int result = numerator / denominator; // This line will throw an ArithmeticException
+            System.out.println("The result is: " + (numerator / denominator));
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException caught: Division by zero is not allowed.");
+            System.out.println("Exception message: " + e.getMessage());
+        }
+    }
+}
+
+(2) Implement a Java program to catch and handle a NullPointerException exception.
+public class Main {
+    public static void main(String[] args) {
+        int[] a = null;
+
+        try {
+            int length = a.length;
+            System.out.println(length);
+        }
+        catch (Exception e){
+            System.out.println("NullpointerException caught :");
+            System.out.println("Message : "+e);
+        }
+    }
+}
+
+
+(3) Create a Java program that throws an ArrayIndexOutOfBoundsException and handles it gracefully.
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1,2,3,4,110,5,9,6,8,7};
+        try {
+        System.out.println(a[11]);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
+(4) Write a program to demonstrate the use of multiple catch blocks for different exceptions.
+public class Main {
+    public static void main(String[] args) {
+
+        int[] a = {1,2,3,4,110,5,9,6,8,7};
+        try {
+            System.out.println(a[11]);
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
+        try {
+            int b=11,c=0;
+            System.out.println(b/c);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int[] a = {1, 2, 3, 4, 110, 5, 9, 6, 8, 7};
+
+        // Handling ArrayIndexOutOfBoundsException
+        try {
+            // This line will throw ArrayIndexOutOfBoundsException
+            System.out.println(a[11]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException caught:");
+            System.out.println(e);
+        } catch (Exception e) {
+            System.out.println("Other Exception caught:");
+            System.out.println(e);
+        }
+
+        // Handling ArithmeticException
+        try {
+            int b = 11, c = 0;
+            // This line will throw ArithmeticException
+            System.out.println(b / c);
+        } catch (ArithmeticException e) {
+            System.out.println("ArithmeticException caught:");
+            System.out.println(e);
+        } catch (Exception e) {
+            System.out.println("Other Exception caught:");
+            System.out.println(e);
+        }
+        System.out.println("Program continues after handling the exceptions.");
+    }
+}
+
+(5) Develop a Java program that uses the finally block to ensure a piece of code is executed regardless of whether an exception occurs or not.
+public class Main {
+    public static void main(String[] args) {
+        try {
+            System.out.println(23/0);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        finally {
+            System.out.println("this is finally block, it always executes.");
+        }
+    }
+}
+
+
