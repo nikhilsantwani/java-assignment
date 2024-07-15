@@ -1,0 +1,773 @@
+EXCEPTION HANDLING :
+//1)
+//Create a Java program that simulates a game of Rock, Paper, Scissors between two players.
+// Take the choices as input and determine the winner using "if-else if" statements.
+// If it's a tie, print "Tie.
+
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter first player input = ");
+//        String player1 = sc.next();
+//        System.out.println("enter second player input = ");
+//        String player2 = sc.next();
+//        if (player1.equals("rock") && player2.equals("paper")) {
+//            System.out.println("Player 2 wins");
+//        } else if (player1.equals("paper") && player2.equals("scissors")) {
+//            System.out.println("Player 2 wins");
+//        } else if (player1.equals("scissors") && player2.equals("rock")) {
+//            System.out.println("Player 2 wins");
+//        } else if (player1.equals("paper") && player2.equals("rock")) {
+//            System.out.println("Player 1 wins");
+//        } else if (player1.equals("scissors") && player2.equals("paper")) {
+//            System.out.println("Player 1 wins");
+//        } else if (player1.equals("rock") && player2.equals("scissors")) {
+//            System.out.println("Player 1 wins");
+//        }
+//        else {
+//            System.out.println("Tie");
+//        }
+//    }
+//}
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        String rock = "rock";
+//        String paper = "paper";
+//        String scissors = "scissors";
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter input of player1 (rock/paper/scissors):");
+//        String player1 =sc.next();
+//        System.out.println("Enter input of player2 (rock/paper/scissors):");
+//        String player2 =sc.next();
+//        if ((player1.equals(rock) && player2.equals(paper)) ||
+//                (player1.equals(paper) && player2.equals(scissors)) ||
+//                (player1.equals(scissors) && player2.equals(rock))){
+//            System.out.println("Player 2 win");
+//        } else if ((player1.equals(paper) && player2.equals(rock)) ||
+//                (player1.equals(scissors) && player2.equals(paper)) ||
+//                (player1.equals(rock) && player2.equals(scissors))){
+//            System.out.println("Player 1 win ");
+//        }
+//        else {
+//            System.out.println("Please choose Correct input from a,b,c");
+//        }
+//
+//    }
+//}
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        for (int i=1;i<=7;i++){
+//            for (int j=i;j>0;j--){
+//                System.out.print(j+" ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        for (int i=0;i<5;i++){
+//            for (int j=5;j>i;j--){
+//                System.out.print(" ");
+//            }
+//            for (int k=1;k<=i;k++){
+//                System.out.print("*");
+//            }
+//            for (int l=0;l<=i;l++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+//class Instruments{
+//    public void PlaySound(){
+//        System.out.print("playing Instruments");
+//    }
+//}
+//class Guitar extends Instruments {
+//    @Override
+//    public void PlaySound() {
+//        System.out.println("Streaming Guitar ");
+//    }
+//}
+//    class Piano extends Instruments {
+//        @Override
+//        public void PlaySound() {
+//            System.out.print("Streaming piano ");
+//        }
+//    }
+//
+//    class Flute extends Instruments {
+//        @Override
+//        public void PlaySound() {
+//            System.out.println("Streaming Flute ");
+//        }
+//    }
+//
+// public class Main {
+//     public static void main(String[] args) {
+//         Instruments instrument = {new Guitar(), new Piano(), new Flute()};
+//         for (Instruments instruments : instruments){
+//             instruments.PlaySound();
+//         }
+//     }
+// }
+
+
+
+//import java.util.ArrayList;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> al = new ArrayList<>();
+//    }
+//}
+
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+////        Scanner sc = new Scanner(System.in);
+////        System.out.println("enter ");
+//        Cart cc = new Cart();
+//        System.out.println(cc.add("product"));
+//        System.out.println(cc.add("item"));
+//    }
+//}
+
+
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//class Product {
+//    private String name;
+//    private double price;
+//
+//    public Product(String name, double price) {
+//        this.name = name;
+//        this.price = price;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public double getPrice() {
+//        return price;
+//    }
+//}
+//
+//public class Cart {
+//    private List<Product> items;
+//
+//    public Cart() {
+//        this.items = new ArrayList<>();
+//    }
+//
+//    public void addItem(Product product) {
+//        items.add(product);
+//    }
+//
+//    public void removeItem(Product product) {
+//        items.remove(product);
+//    }
+//
+//    public List<Product> getItems() {
+//        return items;
+//    }
+//
+//    public static void main(String[] args) {
+//        // Create some products
+//        Product product1 = new Product("Laptop", 1000);
+//        Product product2 = new Product("Phone", 500);
+//        Product product3 = new Product("Tablet", 300);
+//
+//
+//        Cart cart = new Cart();
+//
+//
+//        cart.addItem(product1);
+//        cart.addItem(product2);
+//        cart.addItem(product3);
+//
+//         
+//        cart.removeItem(product2);
+//
+//        // Print the items in the cart
+//        for (Product item : cart.getItems()) {
+//            System.out.println(item.getName());
+//        }
+//    }
+//}
+
+//2
+//Create a Java program to determine whether a year is a leap year, but with additional conditions: if it's divisible by 4, it's a leap year, unless it's divisible by 100, except when it's also divisible by 400.
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter Year ");
+//        int year = sc.nextInt();
+//        if ((year %4 ==0) && (year%100 !=0 || year % 400 ==0)){
+//            System.out.println("leap year");
+//        }
+//        else {
+//            System.out.println("not a leap year");
+//        }
+//    }
+//}
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        System.out.println("Enter a number to determine if it's positive, negative, or zero:");
+//        Scanner sc = new Scanner(System.in);
+//
+//        if (sc.hasNextInt()) {
+//            int num = sc.nextInt();
+//
+//            if (num > 0) {
+//                System.out.println("It's positive.");
+//            } else if (num < 0) {
+//                System.out.println("It's negative.");
+//            } else {
+//                System.out.println("It's zero.");
+//            }
+//        } else {
+//            System.out.println("Invalid input. Please enter a valid integer.");
+//        }
+//    }
+//}
+
+
+//import java.util.*;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
+//
+//public class Main {
+//    private static final String EMAIL_REGEX = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+//
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter an email address to validate: ");
+//        String email = sc.nextLine();
+//        if (isValidEmail(email)) {
+//            System.out.println("The email address is valid.");
+//        } else {
+//            System.out.println("The email address is invalid.");
+//        }
+//
+//        sc.close(); // Close the scanner
+//    }
+//
+//    public static boolean isValidEmail(String email) {
+//        Pattern pattern = Pattern.compile(EMAIL_REGEX);
+//
+//        Matcher matcher = pattern.matcher(email);
+//
+//        return matcher.matches();
+//    }
+//}
+
+
+//5)
+//Write a Java program to simulate a basic calculator that can perform addition, subtraction, multiplication, and division operations.
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter input1 = ");
+//        int input1 = sc.nextInt();
+//
+//        System.out.println("Enter input2 = ");
+//        int input2 = sc.nextInt();
+//
+//        System.out.println("Enter Symbol = ");
+//
+//        char Symbol = sc.next().charAt(0);
+//
+//        switch (Symbol) {
+//            case '+' :
+//                System.out.println(input1+input2);
+//                break;
+//        case '-' :
+//        System.out.println(input1-input2);
+//        break;
+//
+//            case '*' :
+//                System.out.println(input1*input2);
+//                break;
+//            case '/' :
+//                System.out.println(input1/input2);
+//                break;
+//            default:
+//                System.out.println("Invalid_Operartion");
+//
+//        }
+//    }
+//}
+
+
+//import java.util.Scanner;
+//
+//public class Calculator {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Welcome to the Basic Calculator");
+//
+//        while (true) {
+//            System.out.println("Choose an operation: +, -, *, /");
+//            char operation = sc.next().charAt(0);
+//
+//            System.out.print("Enter first number: ");
+//            double num1 = sc.nextDouble();
+//
+//            System.out.print("Enter second number: ");
+//            double num2 = sc.nextDouble();
+//
+//            double result;
+//
+//            switch (operation) {
+//                case '+':
+//                    result = num1 + num2;
+//                    System.out.println("Result: " + result);
+//                    break;
+//                case '-':
+//                    result = num1 - num2;
+//                    System.out.println("Result: " + result);
+//                    break;
+//                case '*':
+//                    result = num1 * num2;
+//                    System.out.println("Result: " + result);
+//                    break;
+//                case '/':
+//                    if (num2 != 0) {
+//                        result = num1 / num2;
+//                        System.out.println("Result: " + result);
+//                    } else {
+//                        System.out.println("Error: Division by zero is not allowed.");
+//                    }
+//                    break;
+//                default:
+//                    System.out.println("Invalid operation. Please choose +, -, *, or /.");
+//            }
+//
+//            System.out.print("Do you want to perform another calculation? (yes/no): ");
+//            String continueCalc = sc.next();
+//            if (!continueCalc.equalsIgnoreCase("yes")) {
+//                break;
+//            }
+//        }
+//
+//        sc.close();
+//        System.out.println("Thank you for using the Basic Calculator!");
+//    }
+//}
+
+//6)
+//Create a program that reads a year and a month as input and prints the number of days in that month, considering leap years for February.
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter Year = ");
+//        int year = sc.nextInt();
+//
+//        System.out.println("Enter months = ");
+//        int month = sc.nextInt();
+//
+//        int days = sc.nextInt();
+//
+//        switch (month) {
+//            case 1: // January
+//            case 3: // March
+//            case 5: // May
+//            case 7: // July
+//            case 8: // August
+//            case 10: // October
+//            case 12: // December
+//                days = 31;
+//                break;
+//            case 4: // April
+//            case 6: // June
+//            case 9: // September
+//            case 11: // November
+//                days = 30;
+//                break;
+//            case 2: // February
+//                if ((year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) {
+//                    days = 29; // Leap year
+//                } else {
+//                    days = 28; // Non-leap year
+//                }
+//                break;
+//            default:
+//                System.out.println("Invalid month. Please enter a value between 1 and 12.");
+//                sc.close();
+//                return;
+//        }
+//
+//        System.out.println("Number of days in month " + month + " of year " + year + " is: " + days);
+//
+//        sc.close();
+//    }
+//}
+
+//7)
+//Write a Java program that checks if a given number is a perfect square and, if it is, finds its square root.
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter number = ");
+//        int num = sc.nextInt();
+//
+//        if (num == 0) {
+//            System.out.println("0 is the square root of 0");
+//        } else if (num == 1) {
+//            System.out.println("1 is the square root of 1");
+//        }
+//        else {
+//            int a = 0;
+//            boolean isprime = false;
+//            for (int i = 1; i <= num / 2; i++) {
+//                if (i*i == num) {
+//                    isprime = true;
+//                    a = i;
+//                    break;
+//                }
+//            }
+//            if (isprime) {
+//                System.out.println(a + " is square root of " + num);
+//            } else {
+//                System.out.println(num + " is not a perfect square");
+//            }
+//        }
+//    }
+//}
+
+
+//8)
+//Implement a Java program that takes a sentence as input and counts the number of vowels, consonants, and special characters in it.
+
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter Sentence = ");
+//        String str = sc.nextLine();
+//
+//        int vowel =0;
+//        int consonent =0;
+//        int special =0;
+//
+//        str = str.toLowerCase();
+//
+//
+//        for (int i=0;i<str.length();i++){
+//            char ch = str.charAt(i);
+//
+//            if (ch>= 'a' && ch<='z'){
+//                if (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+//                    vowel++;
+//                }
+//                else {
+//                    consonent++;
+//                }
+//            }
+//            else {
+//                special++;
+//            }
+//        }
+//        System.out.println("No. of vowels = "+vowel);
+//        System.out.println("No. of Consonent = "+consonent);
+//        System.out.println("No. of Special Character = "+special);
+//    }
+//}
+
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+// (9) Implement a program that calculates the age of a person based on their birthdate and the current date.
+
+//import java.util.Calendar;
+//import java.util.Scanner;
+//
+// class AgeCalculator {
+//    public static void main(String[] args) {
+//        // Create a Scanner object for user input
+//        Scanner scanner = new Scanner(System.in);
+//
+//        // Prompt user to enter their birthdate
+//        System.out.println("Enter your birthdate (yyyy-MM-dd): ");
+//        String birthdateStr = scanner.nextLine();
+//
+//        // Parse birthdate string
+//        String[] parts = birthdateStr.split("-");
+//        int year = Integer.parseInt(parts[0]);
+//        int month = Integer.parseInt(parts[1]);
+//        int day = Integer.parseInt(parts[2]);
+//
+//        // Get current date
+//        Calendar cal = Calendar.getInstance();
+//        int currentYear = cal.get(Calendar.YEAR);
+//        int currentMonth = cal.get(Calendar.MONTH) + 1; // Month is 0-based
+//        int currentDay = cal.get(Calendar.DAY_OF_MONTH);
+//
+//        // Calculate age
+//        int age = currentYear - year;
+//
+//        // Adjust age if birthday hasn't occurred yet this year
+//        if (currentMonth < month || (currentMonth == month && currentDay < day)) {
+//            age--;
+//        }
+//        // Output the calculated age
+//        System.out.println("Your age is: " + age + " years.");
+//        // Close the scanner
+//        scanner.close();
+//    }
+//}
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter no. = ");
+//        int num = sc.nextInt();
+//        int temp=num;
+//        int count=0;
+//        while (temp!=0){
+//            temp=temp%10;
+//            count++;
+//        }
+//        int a=0;
+//        for (int i=0;i<count;i++){
+//            a=num%10;
+//
+//        }
+//    }
+//}
+
+
+//EXCEPTION HANDLING :
+//Write a Java program that generates an ArithmeticException and handles it using a try-catch block.
+//public class Main {
+//    public static void main(String[] args) {
+//        int a=10,b=0,c=0;
+//        try {
+//            System.out.println(a/b);
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//    }
+//}
+//
+//class ArithmeticExceptionExample {
+//    public static void main(String[] args) {
+//        int numerator = 10;
+//        int denominator = 0;
+//        try {
+//            //int result = numerator / denominator; // This line will throw an ArithmeticException
+//            System.out.println("The result is: " + (numerator / denominator));
+//        } catch (ArithmeticException e) {
+//            System.out.println("ArithmeticException caught: Division by zero is not allowed.");
+//            System.out.println("Exception message: " + e.getMessage());
+//        }
+//    }
+//}
+//
+//(2) Implement a Java program to catch and handle a NullPointerException exception.
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] a = null;
+//
+//        try {
+//            int length = a.length;
+//            System.out.println(length);
+//        }
+//        catch (Exception e){
+//            System.out.println("NullpointerException caught :");
+//            System.out.println("Message : "+e);
+//        }
+//    }
+//}
+//
+//
+//(3) Create a Java program that throws an ArrayIndexOutOfBoundsException and handles it gracefully.
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] a = {1,2,3,4,110,5,9,6,8,7};
+//        try {
+//        System.out.println(a[11]);
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//    }
+//}
+//
+//(4) Write a program to demonstrate the use of multiple catch blocks for different exceptions.
+//public class Main {
+//    public static void main(String[] args) {
+//
+//        int[] a = {1,2,3,4,110,5,9,6,8,7};
+//        try {
+//            System.out.println(a[11]);
+//        }
+//        catch (ArrayIndexOutOfBoundsException e){
+//            System.out.println(e);
+//        }
+//        try {
+//            int b=11,c=0;
+//            System.out.println(b/c);
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//    }
+//}
+//
+//
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] a = {1, 2, 3, 4, 110, 5, 9, 6, 8, 7};
+//
+//        // Handling ArrayIndexOutOfBoundsException
+//        try {
+//            // This line will throw ArrayIndexOutOfBoundsException
+//            System.out.println(a[11]);
+//        } catch (ArrayIndexOutOfBoundsException e) {
+//            System.out.println("ArrayIndexOutOfBoundsException caught:");
+//            System.out.println(e);
+//        } catch (Exception e) {
+//            System.out.println("Other Exception caught:");
+//            System.out.println(e);
+//        }
+//
+//        // Handling ArithmeticException
+//        try {
+//            int b = 11, c = 0;
+//            // This line will throw ArithmeticException
+//            System.out.println(b / c);
+//        } catch (ArithmeticException e) {
+//            System.out.println("ArithmeticException caught:");
+//            System.out.println(e);
+//        } catch (Exception e) {
+//            System.out.println("Other Exception caught:");
+//            System.out.println(e);
+//        }
+//        System.out.println("Program continues after handling the exceptions.");
+//    }
+//}
+//
+//(5) Develop a Java program that uses the finally block to ensure a piece of code is executed regardless of whether an exception occurs or not.
+//public class Main {
+//    public static void main(String[] args) {
+//        try {
+//            System.out.println(23/0);
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//        finally {
+//            System.out.println("this is finally block, it always executes.");
+//        }
+//    }
+//}
+//
+//
+
+
+//class TestFinallyBlock {
+//    public static void main(String args[]){
+//
+//        try{
+//            int data=25/0;
+//            System.out.println(data);
+//        }
+//
+//
+//        finally {
+//            System.out.println("finally block is always executed");
+//        }
+//        System.out.println("rest of phe code...");
+//    }
+//}
+
+//public class Main{
+//    public static void main(String []args){
+//        try
+//        {
+//            throw 90;
+//        }
+//        catch(int e){
+//            System.out.println("Caught the exception "+e);
+//        }
+//
+//    }
+//}
+
+//class Calculation extends Exception
+//{
+//    public Calculation()
+//    {
+//        System.out.println("Calculation class is instantiated");
+//    }
+//    public void add(int a, int b)
+//    {
+//        System.out.println("The sum is "+(a+b));
+//    }
+//}
+//public class Main{
+//    public static void main(String []args){
+//        try
+//        {
+//            throw new Calculation();
+//        }
+//        catch(Calculation c){
+//            c.add(10,20);
+//        }
+//    }
+//}
+
+//// Exception Propagation
+
+//class TestExceptionPropagation1{
+//    void m(){
+//        int data=50/0;
+//    }
+//    void n(){
+//        m();
+//    }
+//    void p(){
+//        try{
+//            n();
+//        }catch(Exception e){System.out.println("exception handled");}
+//    }
+//    public static void main(String args[]){
+//        TestExceptionPropagation1 obj=new TestExceptionPropagation1();
+//        obj.p();
+//        System.out.println("normal flow...");
+//    }
+//}
