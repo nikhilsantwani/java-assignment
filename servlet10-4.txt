@@ -1,0 +1,278 @@
+date 
+table : 
+course detail 
+number 	course_name duration 
+
+=>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="course">course</a>
+</body>
+</html>
+
+=>
+package second;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class course
+ */
+@WebServlet("/course")
+public class course extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public course() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter out=response.getWriter();
+		out.print("<html>");
+		out.print("<table>");
+		out.print("<th>Number</th>");
+		out.print("<th>course</th>");
+		out.print("<th>duration</th>");
+		out.print("<th>Price</th>");
+		out.print("<tr><td>1</><td>java</td><td>10 months</td><td>30000</td></tr>");
+		out.print("<tr><td>2</td><td>Data Science</td><td>8 months</td><td>30000</td></tr>");
+		out.print("</table>");
+		out.print("</html>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+
+----------------------------------------------
+tables : 
+==================================================
+school table 
+
+roll name fname mname class
+5 data print 
+
+package second;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class course
+ */
+@WebServlet("/course")
+public class course extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public course() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter out=response.getWriter();
+		out.print("<html>");
+		out.print("<table>");
+		out.print("<th><Roll No./th>");
+		out.print("<th>Name</th>");
+		out.print("<th>Fname</th>");
+		out.print("<th>Mname</th>");
+		out.print("<th>Class</th>");
+		out.print("<tr><td>1</td><td>Aparajita Biswas</td><td>Amitabha Biswas</td><td>Ruma Chakraborty</td><td>7</td></tr>");
+		out.print("<tr><td>2</td><td>Mandeep Gope</td><td>Samir Gope</td><td>Maya Ghosh</td><td>7</td></tr>");
+		out.print("<tr><td>3</td><td>Barsha Das</td><td>Sanjoy Das</td><td> Uttara Das</td><td>7</td></tr>");
+		out.print("<tr><td>4</td><td>Aritrika Saha</td><td>Jayanta Saha</td><td> Sima Saha</td><td>7</td></tr>");
+		out.print("<tr><td>5</td><td>Tanisha Dutta</td><td>Nitish Dutta</td><td>Ruma Chakraborty</td><td>7</td></tr>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+
+
+
+----------------------
+company 
+srno name department address 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="college">college</a>
+</body>
+</html>
+
+
+package college;
+import java.io.PrintWriter;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class college
+ */
+@WebServlet("/college")
+public class college extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public college() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();
+		out.print("<html>");
+		out.print("<table>");
+		out.print("<th>Sr. No.</th>");
+		out.print("<th>Name</th>");
+		out.print("<th>Department</th>");
+		out.print("<th>Address</th>");
+		out.print("<tr><td>1</td><td>Nikhil</td><td>Development</td><td>Durgapura</td></tr>");
+		out.print("<tr><td>2</td><td>Mandeep</td><td>Finance</td><td>Gopalpura</td></tr>");
+		out.print("<tr><td>3</td><td>Tanisha</td><td>Human Resources</td><td>Mahaveer Nagar</td></tr>");
+		out.print("<tr><td>4</td><td>Animesh</td><td>Security</td><td>pratap Nagar</td></tr>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+
+
+
+
+college 
+roll name fname mname department semester 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="college">college</a>
+</body>
+</html>
+
+package college;
+import java.io.PrintWriter;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class college
+ */
+@WebServlet("/college")
+public class college extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public college() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter out = response.getWriter();
+		out.print("<html>");
+		out.print("<table>");
+		out.print("<th><Roll No./th>");
+		out.print("<th>Name</th>");
+		out.print("<th>Fname</th>");
+		out.print("<th>Mname</th>");
+		out.print("<th>Semester</th>");
+		out.print("<tr><td>1</td><td>Aparajita Biswas</td><td>Amitabha Biswas</td><td>Ruma Chakraborty</td><td>6</td></tr>");
+		out.print("<tr><td>2</td><td>Mandeep Gope</td><td>Samir Gope</td><td>Maya Ghosh</td><td>6</td></tr>");
+		out.print("<tr><td>3</td><td>Barsha Das</td><td>Sanjoy Das</td><td> Uttara Das</td><td>6</td></tr>");
+		out.print("<tr><td>4</td><td>Aritrika Saha</td><td>Jayanta Saha</td><td> Sima Saha</td><td>6</td></tr>");
+		out.print("<tr><td>5</td><td>Tanisha Dutta</td><td>Nitish Dutta</td><td>Ruma Chakraborty</td><td>6</td></tr>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
+
+-------------------------
