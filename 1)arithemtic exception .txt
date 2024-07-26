@@ -1,4 +1,4 @@
-1)arithemtic exception 
+(1) Arithmetic exception 
 calculcator :user input 
 + =>
 - =>
