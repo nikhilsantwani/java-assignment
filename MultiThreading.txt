@@ -163,3 +163,40 @@ System.out.println("The state of thread t2 when it has completed it's execution 
 }  
   
 }  
+
+ class ThreadSynchronizationExample {
+    private static int counter = 0; // Shared resource
+
+    public static void main(String[] args) {
+        // Create two threads that will modify the shared counter
+        Thread thread1 = new Thread(new IncrementTask());
+        Thread thread2 = new Thread(new IncrementTask());
+
+        // Start the threads
+        thread1.start();
+        thread2.start();
+
+        // Wait for both threads to finish
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        // Print the final value of the counter
+        System.out.println("Final counter value: " + counter);
+    }
+
+    static class IncrementTask implements Runnable {
+        @Override
+        public void run() {
+            for (int i = 0; i < 1000; i++) {
+                incrementCounter();
+            }
+        }
+        private synchronized void incrementCounter() {
+            counter++; // Critical section
+        }
+    }
+}
