@@ -154,5 +154,4 @@ public class Main {
             }
             System.out.println("sum of "+(i+1)+" column = "+sum);
         }
-    }
-}
+    }}
