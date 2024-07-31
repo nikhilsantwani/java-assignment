@@ -1,4 +1,4 @@
-1)
+(1)
 String print :
 regex is a learning platform
 public class Main {
