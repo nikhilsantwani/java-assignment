@@ -95,7 +95,7 @@ public class Main {
 
 
 
-3)
+(3)
 arrayindexoutofbound exception :
 
 import java.util.ArrayList;
