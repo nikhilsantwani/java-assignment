@@ -1,4 +1,4 @@
-**(3)reverse String
+*(3)reverse String
 class Reverse
 {
     public static String reverseWord(String str)
