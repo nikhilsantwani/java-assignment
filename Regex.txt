@@ -1,0 +1,90 @@
+1 Validate an Email Address
+
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String email = "example@example.com";
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
+        
+        if (matcher.matches()) {
+            System.out.println("Valid email address");
+        } else {
+            System.out.println("Invalid email address");
+        }
+    }
+}
+2. Check if a String Contains Only Digits
+
+import java.util.regex.Pattern;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String str = "12345";
+        String regex = "\\d+";
+        
+        boolean isNumeric = Pattern.matches(regex, str);
+        
+        if (isNumeric) {
+            System.out.println("String contains only digits");
+        } else {
+            System.out.println("String contains non-digit characters");
+        }
+    }
+}
+3. Extract Numbers from a String
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String str = "Order123, Product456, Qty78";
+        String regex = "\\d+";
+        
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(str);
+        
+        while (matcher.find()) {
+            System.out.println("Found number: " + matcher.group());
+        }
+    }
+}
+4. Check if a String is a Valid Date (Format: dd/mm/yyyy)
+
+import java.util.regex.Pattern;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String date = "15/08/2024";
+        String regex = "^([0-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\\d{4}$";
+        
+        boolean isValidDate = Pattern.matches(regex, date);
+        
+        if (isValidDate) {
+            System.out.println("Valid date format");
+        } else {
+            System.out.println("Invalid date format");
+        }
+    }
+}
+5. Split a String by Commas
+
+import java.util.regex.Pattern;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String str = "apple,banana,orange";
+        String regex = ",";
+        
+        String[] fruits = Pattern.compile(regex).split(str);
+        
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
