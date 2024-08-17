@@ -1,6 +1,6 @@
 2d array questions :
         basic questions of 2D array
-        1:
+        1):
         Write a Java program to initialize and display a 2D array of integers.
 public class Main {
     public static void main(String[] args) {
