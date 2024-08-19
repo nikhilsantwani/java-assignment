@@ -39,3 +39,29 @@ public class Main {
         }
     }
 }
+//(5)
+// To String Method
+
+class MyClass {
+    private int id;
+    private String name;
+
+
+    public MyClass(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+
+    public String toString() {
+        return "MyClass{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass(1, "Example");
+        System.out.println(obj.toString());
+    }
+}
