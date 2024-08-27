@@ -1,4 +1,4 @@
-1]
+[1]
 (A)->constant
 //A.java
 class A {
