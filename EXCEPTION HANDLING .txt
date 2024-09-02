@@ -26,7 +26,7 @@ class ArithmeticExceptionExample {
     }
 }
 
-(2) Implement a Java program to catch and handle a NullPointerException exception.
+2) Implement a Java program to catch and handle a NullPointerException exception.
 public class Main {
     public static void main(String[] args) {
         int[] a = null;
