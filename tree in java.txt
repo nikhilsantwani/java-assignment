@@ -169,7 +169,7 @@ public class Main {
     }
 }
 -----------------------------------------------
-BFS :- breadth first search 
+// BFS :- breadth first search 
 tree traversals
 level : first level
 second level
