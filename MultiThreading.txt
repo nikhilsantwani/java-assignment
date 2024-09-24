@@ -1,4 +1,4 @@
-• Multithreading :-
+# Multithreading :-
 
 class Test extends Thread{
 
