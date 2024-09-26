@@ -1,4 +1,4 @@
-// how to make a tree
+ how to make a tree
 
 import java.util.*;
 class Node{
