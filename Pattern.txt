@@ -1,4 +1,4 @@
-1. Right Triangle Star Pattern
+(1). Right Triangle Star Pattern
 
 public class RightTrianglePattern   
 {   
