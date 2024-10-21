@@ -1,5 +1,5 @@
 
-1 .binary to decimal------
+(1) .binary to decimal------
 
 
 import java.util.Scanner;
