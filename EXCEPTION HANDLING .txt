@@ -1,4 +1,4 @@
-# EXCEPTION HANDLING :
+#EXCEPTION HANDLING :
 Write a Java program that generates an ArithmeticException and handles it using a try-catch block.
 public class Main {
     public static void main(String[] args) {
