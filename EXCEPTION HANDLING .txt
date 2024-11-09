@@ -12,6 +12,7 @@ public class Main {
     }
 }
 
+
 class ArithmeticExceptionExample {
     public static void main(String[] args) {
         int numerator = 10;
