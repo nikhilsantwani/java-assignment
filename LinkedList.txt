@@ -1,5 +1,4 @@
 q-1) insert values in linkedlist
-
 ->public class LL {
     private Node head;
     private Node tail;
