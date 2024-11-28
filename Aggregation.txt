@@ -1,4 +1,5 @@
 (1) :-
+
 [A]->constant
 // Abc.java
 class Abc {
